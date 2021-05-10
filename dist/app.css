@@ -4,6 +4,13 @@
   box-sizing: border-box;
 }
 
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #BCBEBC;
+  font-size: 15px;
+  font-weight: 400;
+}
+
 img {
   width: 100%;
 }
@@ -19,6 +26,7 @@ ul {
 
 a {
   text-decoration: none;
+  color: #21333E;
 }
 
 .text-center {
@@ -153,4 +161,78 @@ a {
 .ptb-75 {
   padding-top: 75px;
   padding-bottom: 75px;
+}
+
+.info-top-bar {
+  background-color: #21333E;
+  padding: 12px 0;
+  font-size: 12px;
+}
+.info-top-bar .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.info-top-bar .container span {
+  cursor: pointer;
+  transition: 0.5s color;
+}
+.info-top-bar .container span a {
+  color: #BCBEBC;
+  transition: 0.5s color;
+}
+.info-top-bar .container span:hover, .info-top-bar .container span:hover a {
+  color: #52BBBA;
+}
+.info-top-bar .container .timetable i {
+  margin-right: 5px;
+}
+.info-top-bar .container .contacts span {
+  margin-left: 20px;
+}
+.info-top-bar .container .contacts i:not(.fa-linkedin-in) {
+  margin-right: 5px;
+}
+
+nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+nav .container .logo {
+  font-weight: 700;
+  color: #21333E;
+  letter-spacing: 4px;
+}
+nav .container .logo .logo-first-half {
+  color: #52BBBA;
+  padding: 10px 0 10px 20px;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  margin-right: 2px;
+  background-color: rgba(82, 187, 186, 0.2);
+}
+nav .container ul li {
+  display: inline-block;
+  margin-left: 30px;
+  cursor: pointer;
+}
+nav .container ul li:hover a:not(.btn) {
+  color: #52BBBA;
+}
+nav .container ul li:hover .btn {
+  background-color: #52BBBA;
+}
+nav .container ul li a {
+  text-transform: uppercase;
+  font-weight: 500;
+  transition: 0.5s color, 0.5s background-color;
+}
+nav .container ul li .btn {
+  display: block;
+  color: white;
+  background-color: #058283;
+  padding: 10px 20px;
+  border-radius: 3px;
 }

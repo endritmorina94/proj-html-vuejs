@@ -1,0 +1,88 @@
+// Inizio info top bar
+.info-top-bar {
+    background-color: $secondary-color;
+    padding: 12px 0;
+    font-size: 12px;
+
+    .container {
+    @include d-flex-sb-center;
+
+        span {
+            cursor: pointer;
+            transition: 0.5s color;
+
+            a {
+                color: $standard-text-color;
+                transition: 0.5s color;
+            }
+
+            &:hover,
+            &:hover a {
+                color: $lighter_primary_color;
+            }
+        }
+
+        .timetable i {
+        margin-right: 5px;
+        }
+
+        .contacts {
+            span {
+                margin-left: 20px;
+            }
+
+            i:not(.fa-linkedin-in) {
+                margin-right: 5px;
+            }
+
+        }
+    }
+}
+
+nav .container {
+    @include d-flex-sb-center;
+    padding: 20px 0;
+
+    .logo {
+        font-weight: 700;
+        color: $secondary-color;
+        letter-spacing: 4px;
+
+        .logo-first-half {
+            color: $lighter_primary_color;
+            padding: 10px 0 10px 20px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            margin-right: 2px;
+            background-color: transparentize($lighter_primary_color, 0.8);
+        }
+    }
+
+    ul li {
+        display: inline-block;
+        margin-left: 30px;
+        cursor: pointer;
+
+        &:hover a:not(.btn){
+            color: $lighter_primary_color;
+        }
+
+        &:hover .btn{
+            background-color: $lighter_primary_color;
+        }
+
+        a {
+            text-transform: uppercase;
+            font-weight: 500;
+            transition: 0.5s color, 0.5s background-color;
+        }
+
+        .btn {
+            @include filled-btn;
+        }
+
+    }
+
+
+}
+// Fine info top bar

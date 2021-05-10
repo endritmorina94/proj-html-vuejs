@@ -4,11 +4,82 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Consultant</title>
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="dist/app.css">
+
         <script src="https://cdn.jsdelivr.net/npm/vue"></script>
     </head>
     <body>
+
+        <div class="wrapper" id="root">
+
+            <!-- INIZIO HEADER -->
+            <header>
+                <!-- Inizio Info Top Bar -->
+                <div class="info-top-bar">
+                    <div class="container">
+
+                        <div class="timetable">
+                            <span>
+                                <i class="fas fa-clock"></i>
+                                Open Hours: {{contactInfo.daysAvailability}} - {{contactInfo.timeAvailability}}
+                            </span>
+                        </div>
+
+                        <div class="contacts">
+                            <span>
+                                <i class="fas fa-phone-alt"></i>
+                                {{contactInfo.phone}}
+                            </span>
+                            <span>
+                                <i class="fas fa-envelope"></i>
+                                {{contactInfo.email}}
+                            </span>
+                            <span>
+                                <a :href="contactInfo.facebook_link"><i class="fab fa-facebook-f"></i></a>
+                            </span>
+                            <span>
+                                <a :href="contactInfo.twitter_link"><i class="fab fa-twitter"></i></a>
+                            </span>
+                            <span>
+                                <a :href="contactInfo.linkedin_link"><i class="fab fa-linkedin-in"></i></a>
+                            </span>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Fine Info Top Bar -->
+
+                <!-- Inizio Navigator -->
+                <nav>
+                    <div class="container">
+
+                        <div class="logo">
+                            <span class="logo-first-half">NEX</span><span>GEN</span>
+                        </div>
+
+                        <ul>
+                            <li v-for="section in sections">
+                                <a href="#">{{section}}</a>
+                            </li>
+
+                            <li>
+                                <a class="btn" href="#">Get in touch</a>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- Fine Navigator -->
+
+            </header>
+            <!-- FINE HEADER -->
+        </div>
+
+
 
 
     <script src="dist/app.js" charset="utf-8"></script>

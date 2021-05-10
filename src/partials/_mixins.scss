@@ -35,3 +35,12 @@
     position: relative;
     bottom: 2px;
 }
+
+@mixin filled-btn {
+    display: block;
+    color: white;
+    background-color: $primary_color;
+    padding: 10px 20px;
+    border-radius: 3px;
+
+}
