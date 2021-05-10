@@ -1,0 +1,37 @@
+@mixin d-flex-sb-center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin d-flex-sa-center {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+@mixin d-flex-col {
+    display: flex;
+    flex-direction: column;
+}
+
+@mixin d-flex-start {
+    display: flex;
+    justify-content: flex-start;
+}
+
+@mixin d-flex-end {
+    display: flex;
+    justify-content: flex-end;
+}
+
+@mixin d-flex-sb {
+    display: flex;
+    justify-content: space-between;
+}
+
+@mixin img-vertically-centered {
+    vertical-align: middle;
+    position: relative;
+    bottom: 2px;
+}
