@@ -6,7 +6,7 @@
 
 body {
     font-family: $standard-text-font;
-    color: $standard-text-color;
+    color: $primary-paragraph-color;
     font-size: 15px;
     font-weight: 400;
 }
@@ -16,8 +16,19 @@ img {
 }
 
 .container {
-    width: 80%;
+    width: 75%;
     margin: 0 auto;
+}
+
+h2 {
+    font-family: $title-font;
+    font-size: 65px;
+    font-weight: 900;
+}
+
+h4 {
+    font-family: $title-font;
+    font-weight: 700;
 }
 
 ul {
@@ -26,7 +37,44 @@ ul {
 
 a {
     text-decoration: none;
-    color: $secondary-color;
+    color: $primary-title-color;
+}
+
+.btn {
+    display: inline-block;
+    color: white;
+    background-color: $primary_color;
+    padding: 11px 21px;
+    border-radius: 3px;
+    border: 1px solid $primary_color;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.5s background-color, 0.5s border-color;
+
+    &:hover {
+        background-color: $secondary-title-color;
+        border-color: $secondary-title-color;
+    }
+}
+
+.btn-empty {
+    display: inline-block;
+    color: $primary_color;
+    background-color: transparent;
+    padding: 11px 21px;
+    border-radius: 3px;
+    border: 1px solid $primary_color;
+    text-transform: uppercase;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.5s background-color, 0.5s color, 0.5s border-color;
+
+    &:hover {
+        background-color: $secondary-title-color;
+        color: white;
+        border-color: $secondary-title-color;
+    }
 }
 
 .text-center {

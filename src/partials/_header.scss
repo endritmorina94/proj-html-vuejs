@@ -1,8 +1,9 @@
 // Inizio info top bar
 .info-top-bar {
-    background-color: $secondary-color;
-    padding: 12px 0;
-    font-size: 12px;
+    background-color: $primary-title-color;
+    padding: 15px 0;
+    font-size: 13px;
+    color: $secondary-paragraph-color;
 
     .container {
     @include d-flex-sb-center;
@@ -12,13 +13,13 @@
             transition: 0.5s color;
 
             a {
-                color: $standard-text-color;
+                color: $secondary-paragraph-color;
                 transition: 0.5s color;
             }
 
             &:hover,
             &:hover a {
-                color: $lighter_primary_color;
+                color: l$secondary-title-color;
             }
         }
 
@@ -28,7 +29,7 @@
 
         .contacts {
             span {
-                margin-left: 20px;
+                margin-left: 25px;
             }
 
             i:not(.fa-linkedin-in) {
@@ -38,51 +39,99 @@
         }
     }
 }
+// Fine info top bar
 
-nav .container {
-    @include d-flex-sb-center;
-    padding: 20px 0;
+// Inizio Navigator
+nav {
+    background-color: trasparent;
 
-    .logo {
-        font-weight: 700;
-        color: $secondary-color;
-        letter-spacing: 4px;
+    .container {
+        @include d-flex-sb-center;
+        padding: 20px 0;
 
-        .logo-first-half {
-            color: $lighter_primary_color;
-            padding: 10px 0 10px 20px;
-            border-top-left-radius: 20px;
-            border-bottom-left-radius: 20px;
-            margin-right: 2px;
-            background-color: transparentize($lighter_primary_color, 0.8);
+        .logo {
+            font-size: 18px;
+            font-weight: 700;
+            color: $primary-title-color;
+            letter-spacing: 4px;
+
+            .logo-first-half {
+                color: $secondary-title-color;
+                padding: 10px 0 10px 25px;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                margin-right: 2px;
+                background-color: transparentize($primary_color, 0.85);
+            }
+        }
+
+        ul li {
+            display: inline-block;
+            margin-left: 30px;
+            cursor: pointer;
+
+            &:hover a:not(.btn){
+                color: $secondary-title-color;
+            }
+
+            a {
+                text-transform: uppercase;
+                font-weight: 500;
+                transition: 0.5s color, 0.5s background-color;
+            }
+        }
+    }
+}
+// Fine Navigator
+
+// Inizio Banner
+.banner {
+    width: 100%;
+    height: calc(100vh - 127px);
+    position: relative;
+    overflow: hidden;
+
+    .bg-image {
+        width: 200%;
+        height: 100%;
+        background-image: url("../img/bg-parallax.png");
+        background-size: cover;
+        background-position: center;
+        position: absolute;
+        bottom: 0;
+        left: -50%;
+        z-index: -1;
+    }
+
+    .container {
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        p {
+            width: 42%;
+            text-align: center;
+            margin: 20px 0 40px;
+            font-size: 17px;
         }
     }
 
-    ul li {
-        display: inline-block;
-        margin-left: 30px;
-        cursor: pointer;
+    h2 {
+        color: $primary-title-color;
 
-        &:hover a:not(.btn){
-            color: $lighter_primary_color;
+        span {
+            color: $primary_color;
+            padding: 0 10px;
+            border-radius: 3px;
+            margin-left: 10px;
+            background-color: transparentize($primary_color, 0.86);
         }
-
-        &:hover .btn{
-            background-color: $lighter_primary_color;
-        }
-
-        a {
-            text-transform: uppercase;
-            font-weight: 500;
-            transition: 0.5s color, 0.5s background-color;
-        }
-
-        .btn {
-            @include filled-btn;
-        }
-
     }
 
+    .btn-empty {
+        margin-left: 20px;
+    }
 
 }
-// Fine info top bar
