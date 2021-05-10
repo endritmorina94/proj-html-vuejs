@@ -1,0 +1,66 @@
+//MAIN
+//Inizio Services Section
+.services{
+    background-color: $bg-color-2;
+
+    .container {
+        padding: 120px 0;
+
+        .small-title {
+            color: $secondary-title-color;
+            font-weight: 700;
+            font-size: 13px;
+        }
+
+        h3 {
+            margin: 20px 0;
+        }
+
+        .services-info {
+            @include d-flex-sb-center;
+
+            .btn {
+                margin-left: 150px;
+            }
+        }
+
+        .services-container {
+            @include d-flex-start;
+            flex-wrap: wrap;
+            margin-right: -25px;
+            margin-top: 50px;
+
+            .service {
+                width: calc(100% / 3 - 25px);
+                background-color: $bg-color-1;
+                padding: 55px 40px;
+                border-radius: 10px;
+                margin-right: 25px;
+                margin-bottom: 25px;
+                position: relative;
+
+                .arrow {
+                    position: absolute;
+                    top: 55px;
+                    right: 45px;
+
+                    i {
+                        font-size: 23px;
+                        color: transparentize($primary-color, 0.5);
+                    }
+                }
+
+                i {
+                    font-size: 35px;
+                    color: $primary_color;
+                }
+
+                h4 {
+                    font-size: 22px;
+                    margin: 20px 0;
+                }
+            }
+        }
+    }
+}
+//Fine Services Section

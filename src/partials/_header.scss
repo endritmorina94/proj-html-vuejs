@@ -19,7 +19,7 @@
 
             &:hover,
             &:hover a {
-                color: l$secondary-title-color;
+                color: $secondary-title-color;
             }
         }
 
@@ -47,7 +47,7 @@ nav {
 
     .container {
         @include d-flex-sb-center;
-        padding: 20px 0;
+        padding: 18px 0;
 
         .logo {
             font-size: 18px;
@@ -57,17 +57,17 @@ nav {
 
             .logo-first-half {
                 color: $secondary-title-color;
-                padding: 10px 0 10px 25px;
+                padding: 10px 0 10px 27px;
                 border-top-left-radius: 20px;
                 border-bottom-left-radius: 20px;
                 margin-right: 2px;
-                background-color: transparentize($primary_color, 0.85);
+                background-color: transparentize($secondary-title-color, 0.85);
             }
         }
 
         ul li {
             display: inline-block;
-            margin-left: 30px;
+            margin-left: 31px;
             cursor: pointer;
 
             &:hover a:not(.btn){
@@ -87,7 +87,7 @@ nav {
 // Inizio Banner
 .banner {
     width: 100%;
-    height: calc(100vh - 127px);
+    height: calc(100vh - 124px);
     position: relative;
     overflow: hidden;
 
@@ -120,18 +120,10 @@ nav {
 
     h2 {
         color: $primary-title-color;
-
-        span {
-            color: $primary_color;
-            padding: 0 10px;
-            border-radius: 3px;
-            margin-left: 10px;
-            background-color: transparentize($primary_color, 0.86);
-        }
     }
 
     .btn-empty {
         margin-left: 20px;
     }
-
 }
+// Fine Banner

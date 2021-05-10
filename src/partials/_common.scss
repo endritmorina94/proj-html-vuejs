@@ -7,7 +7,7 @@
 body {
     font-family: $standard-text-font;
     color: $primary-paragraph-color;
-    font-size: 15px;
+    font-size: 14.5px;
     font-weight: 400;
 }
 
@@ -24,11 +24,19 @@ h2 {
     font-family: $title-font;
     font-size: 65px;
     font-weight: 900;
+    color: $primary-title-color;
+}
+
+h3 {
+    font-family: $title-font;
+    font-size: 43px;
+    font-weight: 900;
+    color: $primary-title-color;
 }
 
 h4 {
-    font-family: $title-font;
     font-weight: 700;
+    color: $primary-title-color;
 }
 
 ul {
@@ -44,12 +52,13 @@ a {
     display: inline-block;
     color: white;
     background-color: $primary_color;
-    padding: 11px 21px;
+    padding: 11px 23px;
     border-radius: 3px;
     border: 1px solid $primary_color;
     text-transform: uppercase;
     font-weight: 500;
     cursor: pointer;
+    white-space: nowrap;
     transition: 0.5s background-color, 0.5s border-color;
 
     &:hover {
@@ -62,12 +71,13 @@ a {
     display: inline-block;
     color: $primary_color;
     background-color: transparent;
-    padding: 11px 21px;
+    padding: 11px 22px;
     border-radius: 3px;
     border: 1px solid $primary_color;
     text-transform: uppercase;
     font-weight: 500;
     cursor: pointer;
+    white-space: nowrap;
     transition: 0.5s background-color, 0.5s color, 0.5s border-color;
 
     &:hover {
@@ -75,6 +85,14 @@ a {
         color: white;
         border-color: $secondary-title-color;
     }
+}
+
+.surrounded {
+    color: $primary_color;
+    padding: 0 15px;
+    border-radius: 4px;
+    margin-left: 10px;
+    background-color: transparentize($secondary-title-color, 0.85);
 }
 
 .text-center {
