@@ -275,11 +275,17 @@
 
         li {
             height: 25px;
+            cursor: pointer;
 
             img {
                 height: 100%;
                 width: auto;
                 filter: brightness(3.5);
+                transition: 0.5s filter;
+            }
+
+            &:hover img {
+                filter: brightness(7);
             }
         }
 

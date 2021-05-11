@@ -250,8 +250,8 @@ a {
 
 .info-top-bar {
   background-color: #21333E;
-  padding: 15px 0;
-  font-size: 13px;
+  padding: 16px 0;
+  font-size: 14.5px;
   color: #C0C3D0;
 }
 .info-top-bar .container {
@@ -319,7 +319,7 @@ nav .container ul li a {
 
 .banner {
   width: 100%;
-  height: calc(100vh - 124px);
+  height: calc(100vh - 132px);
   position: relative;
   overflow: hidden;
 }
@@ -345,7 +345,7 @@ nav .container ul li a {
   width: 42%;
   text-align: center;
   margin: 20px 0 40px;
-  font-size: 17px;
+  font-size: 18px;
 }
 .banner h2 {
   color: #21333E;
@@ -596,11 +596,16 @@ nav .container ul li a {
 }
 .results .partners-list li {
   height: 25px;
+  cursor: pointer;
 }
 .results .partners-list li img {
   height: 100%;
   width: auto;
   filter: brightness(3.5);
+  transition: 0.5s filter;
+}
+.results .partners-list li:hover img {
+  filter: brightness(7);
 }
 
 .get-in-touch {

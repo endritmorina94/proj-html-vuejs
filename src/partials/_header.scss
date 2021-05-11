@@ -1,8 +1,8 @@
 // Inizio info top bar
 .info-top-bar {
     background-color: $primary-title-color;
-    padding: 15px 0;
-    font-size: 13px;
+    padding: 16px 0;
+    font-size: 14.5px;
     color: $secondary-paragraph-color;
 
     .container {
@@ -80,7 +80,7 @@ nav {
 // Inizio Banner
 .banner {
     width: 100%;
-    height: calc(100vh - 124px);
+    height: calc(100vh - 132px);
     position: relative;
     overflow: hidden;
 
@@ -107,7 +107,7 @@ nav {
             width: 42%;
             text-align: center;
             margin: 20px 0 40px;
-            font-size: 17px;
+            font-size: 18px;
         }
     }
 
