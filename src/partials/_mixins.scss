@@ -45,12 +45,12 @@
 @mixin logo {
     font-weight: 700;
     color: $primary-title-color;
-    letter-spacing: 4px;
+    letter-spacing: 5px;
 }
 
 @mixin logo-surrended {
     color: $secondary-title-color;
-    padding: 10px 0 10px 27px;
+    padding: 10px 0 10px 30px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
     margin-right: 2px;

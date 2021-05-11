@@ -1,6 +1,6 @@
 //MAIN
 //Inizio Services Section
-.services{
+.services {
     background-color: $bg-color-2;
 
     .container {
@@ -178,7 +178,7 @@
 .projects {
     padding: 130px 0;
 
-    .project-types li{
+    .project-types li {
         display: inline-block;
         text-transform: uppercase;
         font-weight: 500;
@@ -277,7 +277,6 @@
     .parallax {
         padding: 130px 0;
         background-image: url("../img/bg-7.jpg");
-
         background-attachment: fixed;
         background-position: center;
         background-repeat: no-repeat;
