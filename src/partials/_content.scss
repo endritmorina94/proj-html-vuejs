@@ -189,7 +189,7 @@
         &.active {
             color: $primary-title-color;
             border-radius: 4px;
-            background-color: transparentize($secondary-title-color, 0.85);
+            background-color: transparentize($primary_color, 0.85);
         }
 
         &:hover {
@@ -420,7 +420,7 @@
                         width: 44px;
                         height: auto;
                         text-align: center;
-                        background-color: transparentize($secondary-title-color, 0.85);
+                        background-color: transparentize($primary_color, 0.85);
                         padding: 12px;
                         border-radius: 50%;
                         margin-right: 5px;

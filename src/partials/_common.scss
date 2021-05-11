@@ -23,7 +23,7 @@ img {
 
 h2 {
     font-family: $title-font;
-    font-size: 75px;
+    font-size: 73px;
     font-weight: 900;
     color: $primary-title-color;
 }
@@ -107,14 +107,14 @@ a {
     padding: 0 14px;
     border-radius: 4px;
     margin-left: 8px;
-    background-color: transparentize($secondary-title-color, 0.85);
+    background-color: transparentize($primary_color, 0.85);
 }
 
 .surrounded.white {
     color: white;
     margin-left: 0;
     margin-right: 8px;
-    background-color: transparentize($secondary-title-color, 0.85);
+    background-color: transparentize($primary_color, 0.85);
 }
 
 .text-center {
