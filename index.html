@@ -1,350 +1,312 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Consultant</title>
 
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Consultant</title>
 
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="dist/app.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
 
-        <script src="https://cdn.jsdelivr.net/npm/vue"></script>
-    </head>
-    <body>
-        <div class="wrapper" id="root">
-            <!-- INIZIO HEADER -->
-            <header>
-                <!-- Inizio Info Top Bar -->
-                <div class="info-top-bar">
-                    <div class="container">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/app.css">
 
-                        <div class="timetable">
-                            <span>
-                                <i class="fas fa-clock"></i>
-                                Open Hours: {{companyInfo.daysAvailability}} - {{companyInfo.timeAvailability}}
-                            </span>
-                        </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+</head>
 
-                        <div class="contacts">
-                            <span>
-                                <i class="fas fa-phone-alt"></i>
-                                {{companyInfo.phone}}
-                            </span>
-                            <span>
-                                <i class="fas fa-envelope"></i>
-                                {{companyInfo.email}}
-                            </span>
-                            <span>
-                                <a :href="companyInfo.facebook_link"><i class="fab fa-facebook-f"></i></a>
-                            </span>
-                            <span>
-                                <a :href="companyInfo.twitter_link"><i class="fab fa-twitter"></i></a>
-                            </span>
-                            <span>
-                                <a :href="companyInfo.linkedin_link"><i class="fab fa-linkedin-in"></i></a>
-                            </span>
-                        </div>
+<body>
+    <div class="wrapper" id="root">
+        <!-- INIZIO HEADER -->
+        <header>
+            <!-- Inizio Info Top Bar -->
+            <div class="info-top-bar">
+                <div class="container">
 
+                    <div class="timetable">
+                        <span>
+                            <i class="fas fa-clock"></i>
+                            Open Hours: {{companyInfo.daysAvailability}} - {{companyInfo.timeAvailability}}
+                        </span>
                     </div>
+
+                    <div class="contacts">
+                        <span>
+                            <i class="fas fa-phone-alt"></i>
+                            {{companyInfo.phone}}
+                        </span>
+                        <span>
+                            <i class="fas fa-envelope"></i>
+                            {{companyInfo.email}}
+                        </span>
+                        <span>
+                            <a :href="companyInfo.facebook_link"><i class="fab fa-facebook-f"></i></a>
+                        </span>
+                        <span>
+                            <a :href="companyInfo.twitter_link"><i class="fab fa-twitter"></i></a>
+                        </span>
+                        <span>
+                            <a :href="companyInfo.linkedin_link"><i class="fab fa-linkedin-in"></i></a>
+                        </span>
+                    </div>
+
                 </div>
-                <!-- Fine Info Top Bar -->
+            </div>
+            <!-- Fine Info Top Bar -->
 
-                <!-- Inizio Navigator -->
-                <nav>
-                    <div class="container">
+            <!-- Inizio Navigator -->
+            <nav>
+                <div class="container">
 
-                        <div class="logo">
-                            <span class="logo-first-half">NEX</span><span>GEN</span>
-                        </div>
-
-                        <ul>
-                            <li v-for="section in sections">
-                                <a href="#">{{section}}</a>
-                            </li>
-
-                            <li>
-                                <a class="btn" href="#">Get in touch</a>
-                            </li>
-                        </ul>
+                    <div class="logo">
+                        <span class="logo-first-half">NEX</span><span>GEN</span>
                     </div>
-                </nav>
-                <!-- Fine Navigator -->
 
-                <!-- Inizio Banner -->
-                <div class="banner">
-                    <div class="bg-image"></div>
-                    <div class="container">
-                        <h2>Ready<span class="surrounded">Team</span></h2>
+                    <ul>
+                        <li v-for="section in sections">
+                            <a href="#">{{section}}</a>
+                        </li>
+
+                        <li>
+                            <a class="btn" href="#">Get in touch</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <!-- Fine Navigator -->
+
+            <!-- Inizio Banner -->
+            <div class="banner">
+                <div class="bg-image"></div>
+                <div class="container">
+                    <h2>Ready<span class="surrounded">Team</span></h2>
+                    <p>
+                        No matter what your company needs, we will be
+                        ready to assist you in the best possible way.
+                    </p>
+
+                    <div class="buttons">
+                        <div class="btn">Get in Touch</div>
+                        <div class="btn-empty">Read More</div>
+                    </div>
+
+                </div>
+            </div>
+            <!-- Fine Banner -->
+        </header>
+        <!-- FINE HEADER -->
+
+        <!-- INIZIO MAIN -->
+        <main>
+
+            <!-- Inizio Services Section -->
+            <section class="services">
+                <div class="container">
+
+                    <p class="small-title">OUR BUSINESS AREAS</p>
+
+                    <h3>Excellence in<span class="surrounded">Services</span></h3>
+
+                    <div class="services-info">
                         <p>
-                            No matter what your company needs, we will be
-                            ready to assist you in the best possible way.
+                            We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of experienced and renowned professionals. These are some options that you can hire.
                         </p>
+
+                        <div class="btn">
+                            See All
+                        </div>
+                    </div>
+
+                    <!-- Inizio Services Container -->
+                    <div class="services-container">
+                        <div class="service" v-for="service in services">
+                            <div class="arrow">
+                                <i class="fas fa-arrow-right"></i>
+                            </div>
+                            <div class="circle"></div>
+                            <i :class="service.icon"></i>
+                            <h4>{{service.name}}</h4>
+                            <p>
+                                {{service.description}}
+                            </p>
+                        </div>
+                    </div>
+                    <!-- Fine Services Container -->
+
+                </div>
+            </section>
+            <!-- Fine Services Section -->
+
+            <!-- Inizio About Section -->
+            <section class="company">
+                <div class="bullets top">
+                    <img src="img/bullets.png" alt="">
+                </div>
+                <div class="section-content">
+                    <div class="company-info">
+                        <p class="small-title">ABOUT THE NETWORK</p>
+
+                        <h3><span class="surrounded white">The</span>Company</h3>
+
+                        <p>
+                            For 12 years we have been providing audit and warranty, financial advice,
+                            risk advice, taxes and related services to select clients.
+                        </p>
+
+                        <!-- Inizio Company Features Container -->
+                        <div class="features-container">
+                            <div class="feature" v-for="feature in features">
+                                <i :class="feature.icon"></i>
+                                <h4>{{feature.name}}</h4>
+                                <p>
+                                    {{feature.description}}
+                                </p>
+                            </div>
+                        </div>
+                        <!-- Fine Company Features Container -->
 
                         <div class="buttons">
                             <div class="btn">Get in Touch</div>
                             <div class="btn-empty">Read More</div>
                         </div>
+                    </div>
 
+                    <div class="successfull-guy-pic">
+                        <img src="img/about-4.jpg" alt="">
                     </div>
                 </div>
-                <!-- Fine Banner -->
-            </header>
-            <!-- FINE HEADER -->
 
-            <!-- INIZIO MAIN -->
-            <main>
+                <div class="bullets bottom">
+                    <img src="img/bullets.png" alt="">
+                </div>
+            </section>
+            <!-- Fine About Section -->
 
-                <!-- Inizio Services Section -->
-                <section class="services">
-                    <div class="container">
+            <!-- Inizio Projects Section -->
+            <section class="projects">
+                <div class="container text-center">
 
-                        <p class="small-title">OUR BUSINESS AREAS</p>
+                    <p class="small-title">
+                        WE DO MORE FOR EVERYONE
+                    </p>
 
-                        <h3>Excellence in<span class="surrounded">Services</span></h3>
+                    <h3>
+                        Actions &<span class="surrounded">Projects</span>
+                    </h3>
 
-                        <div class="services-info">
-                            <p>
-                                We are leaders in providing consultancy services with a set of cutting-edge technologies and a team of experienced and renowned professionals. These are some options that you can hire.
-                            </p>
+                    <ul class="project-types">
+                        <li class="all active">All</li>
+                        <li v-for="project in projects">{{project.type}}</li>
+                    </ul>
 
-                            <div class="btn">
-                                See All
+                    <div class="projects-container">
+                        <div class="project" v-for="project in projects">
+                            <div class="arrow">
+                                <i class="fas fa-arrow-right"></i>
                             </div>
-                        </div>
+                            <img :src="project.img" alt="project.name">
 
-                        <!-- Inizio Services Container -->
-                        <div class="services-container">
-                            <div class="service" v-for="service in services">
-                                <div class="arrow">
-                                    <i class="fas fa-arrow-right"></i>
-                                </div>
-                                <div class="circle"></div>
-                                <i :class="service.icon"></i>
-                                <h4>{{service.name}}</h4>
-                                <p>
-                                    {{service.description}}
-                                </p>
-                            </div>
-                        </div>
-                        <!-- Fine Services Container -->
-
-                    </div>
-                </section>
-                <!-- Fine Services Section -->
-
-                <!-- Inizio About Section -->
-                <section class="company">
-                    <div class="bullets top">
-                        <img src="img/bullets.png" alt="">
-                    </div>
-                    <div class="section-content">
-                        <div class="company-info">
-                            <p class="small-title">ABOUT THE NETWORK</p>
-
-                            <h3><span class="surrounded white">The</span>Company</h3>
+                            <h4>
+                                {{project.name}}
+                            </h4>
 
                             <p>
-                                For 12 years we have been providing audit and warranty, financial advice,
-                                risk advice, taxes and related services to select clients.
+                                {{project.description}}
                             </p>
-
-                            <!-- Inizio Company Features Container -->
-                            <div class="features-container">
-                                <div class="feature" v-for="feature in features">
-                                    <i :class="feature.icon"></i>
-                                    <h4>{{feature.name}}</h4>
-                                    <p>
-                                        {{feature.description}}
-                                    </p>
-                                </div>
-                            </div>
-                            <!-- Fine Company Features Container -->
-
-                            <div class="buttons">
-                                <div class="btn">Get in Touch</div>
-                                <div class="btn-empty">Read More</div>
-                            </div>
-                        </div>
-
-                        <div class="successfull-guy-pic">
-                            <img src="img/about-4.jpg" alt="">
                         </div>
                     </div>
 
-                    <div class="bullets bottom">
-                        <img src="img/bullets.png" alt="">
-                    </div>
-                </section>
-                <!-- Fine About Section -->
+                </div>
+            </section>
+            <!-- Fine Projects Section -->
 
-                <!-- Inizio Projects Section -->
-                <section class="projects">
+            <!-- Inizio Results Section -->
+            <section class="results">
+                <div class="parallax">
                     <div class="container text-center">
 
                         <p class="small-title">
-                            WE DO MORE FOR EVERYONE
+                            WHAT ARE WE DOING
                         </p>
 
                         <h3>
-                            Actions &<span class="surrounded">Projects</span>
+                            <span class="surrounded white">Results</span>in Numbers
                         </h3>
 
-                        <ul class="project-types">
-                            <li class="all active">All</li>
-                            <li v-for="project in projects">{{project.type}}</li>
-                        </ul>
-
-                        <div class="projects-container">
-                            <div class="project" v-for="project in projects">
-                                <div class="arrow">
-                                    <i class="fas fa-arrow-right"></i>
-                                </div>
-                                <img :src="project.img" alt="project.name">
+                        <div class="numbers-row">
+                            <div class="number" v-for="number in numbers">
+                                <p class="count">
+                                    {{number.count}}
+                                </p>
 
                                 <h4>
-                                    {{project.name}}
+                                    {{number.type}}
                                 </h4>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="container">
+                    <ul class="partners-list">
+                        <li v-for="partner in partners">
+                            <img :src="partner.img" alt="partner.name">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <!-- Fine Results Section -->
+
+            <!-- Inizio Sezione Get in Touch -->
+            <section class="get-in-touch">
+                <div class="container">
+
+                    <div class="section-content">
+                        <div class="form-container">
+                            <div class="form-title">
+                                <p class="small-title">
+                                    SEND A MESSAGE
+                                </p>
+
+                                <h3>
+                                    Get in<span class="surrounded">Touch</span>
+                                </h3>
 
                                 <p>
-                                    {{project.description}}
+                                    We will respond to your message as soon as possible.
                                 </p>
                             </div>
+
+                            <div class="form">
+                                <label for="user-name">Name</label>
+                                <input id="user-name" type="text" placeholder="Name">
+
+                                <label for="user-email">Email</label>
+                                <input id="user-email" type="email" placeholder="Email">
+
+                                <label for="user-phone">Phone</label>
+                                <input id="user-phone" type="number" placeholder="Phone">
+
+                                <select>
+                                    <option value="" selected disabled>More Info</option>
+                                    <option v-for="link in footerLinks[1].links">{{link}}</option>
+
+                                    <option value="">Other</option>
+                                </select>
+                                <textarea name="name" rows="6" cols="80" placeholder="Message"></textarea>
+                            </div>
+
+                            <div class="btn">Send</div>
                         </div>
 
-                    </div>
-                </section>
-                <!-- Fine Projects Section -->
+                        <div class="company-info">
+                            <h4>
+                                {{companyInfo.name}}
+                            </h4>
 
-                <!-- Inizio Results Section -->
-                <section class="results">
-                    <div class="parallax">
-                        <div class="container text-center">
-
-                            <p class="small-title">
-                                WHAT ARE WE DOING
-                            </p>
-
-                            <h3>
-                                <span class="surrounded white">Results</span>in Numbers
-                            </h3>
-
-                            <div class="numbers-row">
-                                <div class="number" v-for="number in numbers">
-                                    <p class="count">
-                                        {{number.count}}
-                                    </p>
-
-                                    <h4>
-                                        {{number.type}}
-                                    </h4>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                    <div class="container">
-                        <ul class="partners-list">
-                            <li v-for="partner in partners">
-                                <img :src="partner.img" alt="partner.name">
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <!-- Fine Results Section -->
-
-                <!-- Inizio Sezione Get in Touch -->
-                <section class="get-in-touch">
-                    <div class="container">
-
-                        <div class="section-content">
-                            <div class="form-container">
-                                <div class="form-title">
-                                    <p class="small-title">
-                                        SEND A MESSAGE
-                                    </p>
-
-                                    <h3>
-                                        Get in<span class="surrounded">Touch</span>
-                                    </h3>
-
-                                    <p>
-                                        We will respond to your message as soon as possible.
-                                    </p>
-                                </div>
-
-                                <div class="form">
-                                    <label for="user-name">Name</label>
-                                    <input id="user-name" type="text" placeholder="Name">
-
-                                    <label for="user-email">Email</label>
-                                    <input id="user-email" type="email" placeholder="Email">
-
-                                    <label for="user-phone">Phone</label>
-                                    <input id="user-phone" type="number" placeholder="Phone">
-
-                                    <select>
-                                        <option value="" selected disabled>More Info</option>
-                                        <option v-for="link in footerLinks[1].links">{{link}}</option>
-
-                                        <option value="">Other</option>
-                                    </select>
-                                    <textarea name="name" rows="6" cols="80" placeholder="Message"></textarea>                                </div>
-
-                                <div class="btn">Send</div>
-                            </div>
-
-                            <div class="company-info">
-                                <h4>
-                                    {{companyInfo.name}}
-                                </h4>
-
-                                <p>{{companyInfo.info_1}}</p>
-                                <p>{{companyInfo.info_2}}</p>
-
-                                <div class="contacts">
-                                    <div>
-                                        <i class="fas fa-phone-alt"></i>
-                                        {{companyInfo.phone}}
-                                    </div>
-                                    <div>
-                                        <i class="fas fa-envelope"></i>
-                                        {{companyInfo.email}}
-                                    </div>
-                                    <div>
-                                        <i class="fas fa-map-marker-alt"></i>
-                                        {{companyInfo.address}}
-                                    </div>
-                                </div>
-
-                                <div class="btn-empty">View Map</div>
-
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <!-- Fine Sezione Get in Touch -->
-            </main>
-            <!-- FINE MAIN -->
-
-            <!-- INIZIO FOOTER -->
-            <footer>
-                <!-- Inizio Footer-Top -->
-                <section class="footer-top">
-                    <div class="container">
-
-                        <div class="card muted">
-
-                            <div class="logo">
-                                <span>NEX</span>GEN
-                            </div>
-
-                            <p>
-                                A Functional HTML Template for Corporate & Business.
-                            </p>
+                            <p>{{companyInfo.info_1}}</p>
+                            <p>{{companyInfo.info_2}}</p>
 
                             <div class="contacts">
                                 <div>
@@ -361,48 +323,90 @@
                                 </div>
                             </div>
 
-                            <div class="btn-empty">
-                                Get in Touch
-                            </div>
-
-
-                        </div>
-                        <div class="card" v-for="card in footerLinks">
-
-                            <h4>{{card.title}}</h4>
-
-                            <ul>
-                                <li v-for="link in card.links">
-                                    <a href="#">
-                                        <i class="fas fa-chevron-right"></i>
-                                        {{link}}
-                                    </a>
-                                </li>
-                            </ul>
+                            <div class="btn-empty">View Map</div>
 
                         </div>
                     </div>
-                </section>
-                <!-- Fine Footer-Top -->
+                </div>
+            </section>
+            <!-- Fine Sezione Get in Touch -->
+        </main>
+        <!-- FINE MAIN -->
 
-                <!-- Inizio Footer Bottom -->
-                <section class="footer-bottom">
-                    <div class="container">
+        <!-- INIZIO FOOTER -->
+        <footer>
+            <!-- Inizio Footer-Top -->
+            <section class="footer-top">
+                <div class="container">
+
+                    <div class="card muted">
+
+                        <div class="logo">
+                            <span>NEX</span>GEN
+                        </div>
 
                         <p>
-                            <span>Enjoy the low price. We are tracking any intention of piracy.</span>
-                            <span>© 2020 NEXGEN is Proudly Powered by <span class="green">Codings</span>.</span>
+                            A Functional HTML Template for Corporate & Business.
                         </p>
+
+                        <div class="contacts">
+                            <div>
+                                <i class="fas fa-phone-alt"></i>
+                                {{companyInfo.phone}}
+                            </div>
+                            <div>
+                                <i class="fas fa-envelope"></i>
+                                {{companyInfo.email}}
+                            </div>
+                            <div>
+                                <i class="fas fa-map-marker-alt"></i>
+                                {{companyInfo.address}}
+                            </div>
+                        </div>
+
+                        <div class="btn-empty">
+                            Get in Touch
+                        </div>
+
+
                     </div>
-                </section>
-                <!-- Fine Footer Bottom -->
-            </footer>
-            <!-- FINE FOOTER -->
-        </div>
+                    <div class="card" v-for="card in footerLinks">
+
+                        <h4>{{card.title}}</h4>
+
+                        <ul>
+                            <li v-for="link in card.links">
+                                <a href="#">
+                                    <i class="fas fa-chevron-right"></i>
+                                    {{link}}
+                                </a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </section>
+            <!-- Fine Footer-Top -->
+
+            <!-- Inizio Footer Bottom -->
+            <section class="footer-bottom">
+                <div class="container">
+
+                    <p>
+                        <span>Enjoy the low price. We are tracking any intention of piracy.</span>
+                        <span>© 2020 NEXGEN is Proudly Powered by <span class="green">Codings</span>.</span>
+                    </p>
+                </div>
+            </section>
+            <!-- Fine Footer Bottom -->
+        </footer>
+        <!-- FINE FOOTER -->
+    </div>
 
 
 
 
     <script src="dist/app.js" charset="utf-8"></script>
-    </body>
+</body>
+
 </html>
