@@ -1,0 +1,84 @@
+//FOOTER
+//Inizio Footer Top
+.footer-top {
+    background-color: $bg-color-3;
+    color: $secondary-paragraph-color;
+    padding: 120px 0;
+
+    .container {
+        @include d-flex-sb;
+
+        .card {
+            width: calc(100% / 4 - 25px);
+            background-color: #19191F;
+            padding: 25px 45px;
+            border-radius: 10px;
+            transition: 0.5s transform;
+
+            h4 {
+                color: white;
+                margin-bottom: 24px;
+            }
+
+            ul li {
+                margin-bottom: 13px;
+                cursor: pointer;
+
+                a {
+                    color: $secondary-paragraph-color;
+                    transition: 0.5s color;
+                }
+
+                &:hover a {
+                    color: $secondary-title-color;
+                }
+            }
+
+            &:hover:not(.muted) {
+                transform: translateY(-10px);
+            }
+
+            &.muted {
+                background-color: transparent;
+                padding: 10px 10px 0;
+
+                .logo {
+                    @include logo;
+                    color: $secondary-paragraph-color;
+                    font-size: 25px;
+
+                    span {
+                        @include logo-surrendered;
+                        border-top-left-radius: 23px;
+                        border-bottom-left-radius: 23px;
+                    }
+                }
+
+                p {
+                    margin: 35px 0 30px;
+                }
+
+                .contacts {
+                    div {
+                        margin-bottom: 22px;
+                        cursor: pointer;
+
+                        i {
+                            margin-right: 7px;
+                        }
+
+                        &:hover {
+                            color: $primary_color;
+                        }
+                    }
+                }
+
+                .btn-empty {
+                    color: $secondary-paragraph-color;
+                    margin-top: 7px;
+                }
+            }
+        }
+    }
+}
+//Fine Footer Top

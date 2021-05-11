@@ -10,7 +10,11 @@
 var app = new Vue({
   el: '#root',
   data: {
-    contactInfo: {
+    companyInfo: {
+      name: "Example Inc.",
+      info_1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      info_2: "Praesent diam lacus, dapibus sed imperdiet consectetur.",
+      address: " Main Avenue, 987",
       daysAvailability: "Mon - Sat",
       timeAvailability: "9:00 - 18:00",
       phone: "+1 (305) 1234-5678",
@@ -124,6 +128,16 @@ var app = new Vue({
     }, {
       name: "jQuery",
       img: "img/logo-4.png"
+    }],
+    footerLinks: [{
+      title: "About",
+      links: ["The Company", "Institutional", "Social & Events", "Innovation", "Environment", "Technology"]
+    }, {
+      title: "Services",
+      links: ["Audit & Assurance", "Financial Advisory", "Analytics M&A", "Middle Marketing", "Legal Consulting", "Regulatory Risk"]
+    }, {
+      title: "Support",
+      links: ["Responsibility", "Terms of Use", "About Cookies", "Privacy Policy", "Accessibility", "Information"]
     }]
   },
   methods: {},

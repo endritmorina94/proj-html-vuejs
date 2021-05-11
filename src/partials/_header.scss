@@ -50,18 +50,11 @@ nav {
         padding: 18px 0;
 
         .logo {
-            font-size: 18px;
-            font-weight: 700;
-            color: $primary-title-color;
-            letter-spacing: 4px;
+            font-size: 20px;
+            @include logo;
 
             .logo-first-half {
-                color: $secondary-title-color;
-                padding: 10px 0 10px 27px;
-                border-top-left-radius: 20px;
-                border-bottom-left-radius: 20px;
-                margin-right: 2px;
-                background-color: transparentize($secondary-title-color, 0.85);
+            @include logo-surrendered;
             }
         }
 
