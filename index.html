@@ -121,6 +121,7 @@
                                 <div class="arrow">
                                     <i class="fas fa-arrow-right"></i>
                                 </div>
+                                <div class="circle"></div>
                                 <i :class="service.icon"></i>
                                 <h4>{{service.name}}</h4>
                                 <p>
@@ -332,7 +333,7 @@
             <!-- INIZIO FOOTER -->
             <footer>
                 <!-- Inizio Footer-Top -->
-                <div class="footer-top">
+                <section class="footer-top">
                     <div class="container">
 
                         <div class="card muted">
@@ -372,14 +373,29 @@
 
                             <ul>
                                 <li v-for="link in card.links">
-                                    <a href="#">{{link}}</a>
+                                    <a href="#">
+                                        <i class="fas fa-chevron-right"></i>
+                                        {{link}}
+                                    </a>
                                 </li>
                             </ul>
 
                         </div>
                     </div>
-                </div>
+                </section>
                 <!-- Fine Footer-Top -->
+
+                <!-- Inizio Footer Bottom -->
+                <section class="footer-bottom">
+                    <div class="container">
+
+                        <p>
+                            <span>Enjoy the low price. We are tracking any intention of piracy.</span>
+                            <span>© 2020 NEXGEN is Proudly Powered by <span class="green">Codings</span>.</span>
+                        </p>
+                    </div>
+                </section>
+                <!-- Fine Footer Bottom -->
             </footer>
             <!-- FINE FOOTER -->
         </div>

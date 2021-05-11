@@ -3,7 +3,7 @@
 .footer-top {
     background-color: $bg-color-3;
     color: $secondary-paragraph-color;
-    padding: 120px 0;
+    padding: 120px 0 160px;
 
     .container {
         @include d-flex-sb;
@@ -27,6 +27,10 @@
                 a {
                     color: $secondary-paragraph-color;
                     transition: 0.5s color;
+
+                    i {
+                        margin-right: 7px;
+                    }
                 }
 
                 &:hover a {
@@ -48,7 +52,7 @@
                     font-size: 25px;
 
                     span {
-                        @include logo-surrendered;
+                        @include logo-surrended;
                         border-top-left-radius: 23px;
                         border-bottom-left-radius: 23px;
                     }
@@ -82,3 +86,21 @@
     }
 }
 //Fine Footer Top
+
+//Inizio Footer Bottom
+.footer-bottom {
+    background-color: #0D0D11;
+    color: $secondary-paragraph-color;
+    padding: 35px 0;
+    font-size: 14px;
+
+    p {
+        @include d-flex-sb;
+
+        .green {
+            color: $primary_color;
+            font-size: 16px;
+        }
+    }
+}
+//Fine Footer Bottom

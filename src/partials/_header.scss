@@ -29,7 +29,7 @@
 
         .contacts {
             span {
-                margin-left: 25px;
+                margin-left: 28px;
             }
 
             i:not(.fa-linkedin-in) {
@@ -54,7 +54,7 @@ nav {
             @include logo;
 
             .logo-first-half {
-            @include logo-surrendered;
+            @include logo-surrended;
             }
         }
 
@@ -102,6 +102,10 @@ nav {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+
+        .surrounded {
+            margin-left: 10px;
+        }
 
         p {
             width: 42%;
