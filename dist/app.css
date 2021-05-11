@@ -550,3 +550,52 @@ nav .container ul li a {
   bottom: 40px;
   opacity: 1;
 }
+
+.results {
+  background-color: #111117;
+}
+.results .parallax {
+  padding-top: 120px;
+  background-image: url("../img/bg-7.jpg");
+  min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.results .parallax h3 {
+  color: white;
+}
+.results .parallax .numbers-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.results .parallax .numbers-row .number {
+  width: calc(100% / 4 - 50px);
+  margin-top: 80px;
+}
+.results .parallax .numbers-row .number .count {
+  color: #00A6A6;
+  font-size: 37px;
+  font-weight: 700;
+}
+.results .parallax .numbers-row .number h4 {
+  color: #F9F9F9;
+  margin-top: 25px;
+}
+.results .partners-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 100px 0;
+}
+.results .partners-list li {
+  height: 25px;
+}
+.results .partners-list li img {
+  height: 100%;
+  width: auto;
+  filter: brightness(3.5);
+}

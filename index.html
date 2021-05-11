@@ -213,10 +213,47 @@
                             </div>
                         </div>
 
-
                     </div>
                 </section>
                 <!-- Fine Projects Section -->
+
+                <!-- Inizio Results Section -->
+                <section class="results">
+                    <div class="parallax">
+                        <div class="container text-center">
+
+                            <div class="small-title">
+                                WHAT ARE WE DOING
+                            </div>
+
+                            <h3>
+                                <span class="surrounded white">Results</span>in Numbers
+                            </h3>
+
+                            <div class="numbers-row">
+                                <div class="number" v-for="number in numbers">
+                                    <p class="count">
+                                        {{number.count}}
+                                    </p>
+
+                                    <h4>
+                                        {{number.type}}
+                                    </h4>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="container">
+                        <ul class="partners-list">
+                            <li v-for="partner in partners">
+                                <img :src="partner.img" alt="partner.name">
+                            </li>
+                        </ul>
+                    </div>
+                </section>
+                <!-- Fine Results Section -->
             </main>
             <!-- FINE MAIN -->
         </div>

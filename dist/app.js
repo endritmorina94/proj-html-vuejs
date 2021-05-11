@@ -92,6 +92,38 @@ var app = new Vue({
       name: "Confraternization of the procurement team",
       description: "Lorem ipsum dolor si amet, consectetur adipiscing elit.",
       img: "img/project-6.jpg"
+    }],
+    numbers: [{
+      type: "Certifications",
+      count: 128
+    }, {
+      type: "Employees",
+      count: 230
+    }, {
+      type: "Customers",
+      count: 517
+    }, {
+      type: "Countries Served",
+      count: 94
+    }],
+    partners: [{
+      name: "jQuery",
+      img: "img/logo-4.png"
+    }, {
+      name: "less",
+      img: "img/logo-5.png"
+    }, {
+      name: "WooCommerce",
+      img: "img/logo-1.png"
+    }, {
+      name: "WordPress",
+      img: "img/logo-2.png"
+    }, {
+      name: "Pingdom",
+      img: "img/logo-3.png"
+    }, {
+      name: "jQuery",
+      img: "img/logo-4.png"
     }]
   },
   methods: {},

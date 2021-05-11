@@ -227,3 +227,61 @@
     }
 }
 //Fine Projects Section
+
+//Inizio Results Section
+.results {
+    background-color: $bg-color-3;
+
+    .parallax {
+        padding-top: 120px;
+        background-image: url("../img/bg-7.jpg");
+        min-height: 500px;
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        h3 {
+            color: white;
+        }
+
+        .numbers-row {
+            @include d-flex-sb-center;
+            flex-wrap: wrap;
+
+            .number {
+                width: calc(100% / 4 - 50px);
+                margin-top: 80px;
+
+                .count {
+                    color: $secondary-title-color;
+                    font-size: 37px;
+                    font-weight: 700;
+                }
+
+                h4 {
+                    color: $opaque-white;
+                    margin-top: 25px;
+                }
+            }
+        }
+    }
+
+    .partners-list {
+        @include d-flex-sb-center;
+        padding: 100px 0;
+
+
+        li {
+            height: 25px;
+
+            img {
+                height: 100%;
+                width: auto;
+                filter: brightness(3.5);
+            }
+        }
+
+    }
+}
+//Fine Results Section
