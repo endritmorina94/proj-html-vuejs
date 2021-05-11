@@ -49,6 +49,28 @@ var app = new Vue(
                     description: "Lorem ipsum dolor si amet consectetur adipiscing elit.",
                     icon: "fas fa-inbox"
                 }
+            ],
+            features: [
+                {
+                    name: "Tradition",
+                    description: "Lorem ipsum dolor si amet consectetur adipiscing elit.",
+                    icon: "fas fa-medal"
+                },
+                {
+                    name: "Security",
+                    description: "Lorem ipsum dolor si amet consectetur adipiscing elit.",
+                    icon: "fas fa-lock"
+                },
+                {
+                    name: "Certificate",
+                    description: "Lorem ipsum dolor si amet consectetur adipiscing elit.",
+                    icon: "far fa-edit"
+                },
+                {
+                    name: "Expertise",
+                    description: "Lorem ipsum dolor si amet consectetur adipiscing elit.",
+                    icon: "fas fa-graduation-cap"
+                }
             ]
         },
         methods: {

@@ -32,11 +32,25 @@ h3 {
   font-size: 43px;
   font-weight: 900;
   color: #21333E;
+  margin-bottom: 20px;
 }
 
 h4 {
+  font-size: 22px;
   font-weight: 700;
   color: #21333E;
+  margin: 20px 0;
+}
+
+p {
+  line-height: 23px;
+}
+
+.small-title {
+  color: #00A6A6;
+  font-weight: 700;
+  font-size: 13px;
+  margin-bottom: 20px;
 }
 
 ul {
@@ -87,9 +101,16 @@ a {
 
 .surrounded {
   color: #058283;
-  padding: 0 15px;
+  padding: 0 14px;
   border-radius: 4px;
-  margin-left: 10px;
+  margin-left: 6px;
+  background-color: rgba(0, 166, 166, 0.15);
+}
+
+.surrounded.white {
+  color: white;
+  margin-left: 0;
+  margin-right: 6px;
   background-color: rgba(0, 166, 166, 0.15);
 }
 
@@ -339,14 +360,6 @@ nav .container ul li a {
 .services .container {
   padding: 120px 0;
 }
-.services .container .small-title {
-  color: #00A6A6;
-  font-weight: 700;
-  font-size: 13px;
-}
-.services .container h3 {
-  margin: 20px 0;
-}
 .services .container .services-info {
   display: flex;
   justify-content: space-between;
@@ -384,7 +397,67 @@ nav .container ul li a {
   font-size: 35px;
   color: #058283;
 }
-.services .container .services-container .service h4 {
-  font-size: 22px;
-  margin: 20px 0;
+
+.company {
+  background-color: #111117;
+  color: #C0C3D0;
+  position: relative;
+}
+.company .section-content {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+.company .section-content .company-info {
+  width: 37.5%;
+}
+.company .section-content .company-info h3 {
+  color: white;
+}
+.company .section-content .company-info .features-container {
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+.company .section-content .company-info .features-container .feature {
+  width: 40%;
+  margin-bottom: 40px;
+  margin-right: 40px;
+}
+.company .section-content .company-info .features-container .feature h4 {
+  color: white;
+  display: inline-block;
+}
+.company .section-content .company-info .features-container .feature i {
+  font-size: 23px;
+  color: #00A6A6;
+  margin-right: 7px;
+}
+.company .section-content .company-info .buttons .btn {
+  margin-right: 20px;
+}
+.company .section-content .company-info .buttons .btn-empty {
+  color: white;
+}
+.company .section-content .successfull-guy-pic {
+  width: 50%;
+  overflow: hidden;
+}
+.company .section-content .successfull-guy-pic img {
+  width: 120%;
+}
+.company .bullets {
+  position: absolute;
+  width: 10%;
+  height: 58px;
+  overflow: hidden;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.company .bullets.top {
+  top: -28px;
+}
+.company .bullets.bottom {
+  bottom: -28px;
 }

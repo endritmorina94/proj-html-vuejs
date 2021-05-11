@@ -101,7 +101,7 @@
                 <section class="services">
                     <div class="container">
 
-                        <span class="small-title">OUR BUSINESS AREAS</span>
+                        <p class="small-title">OUR BUSINESS AREAS</p>
 
                         <h3>Excellence in<span class="surrounded">Services</span></h3>
 
@@ -133,6 +133,51 @@
                     </div>
                 </section>
                 <!-- Fine Services Section -->
+
+                <!-- Inizio Company Section -->
+                <section class="company">
+                    <div class="bullets top">
+                        <img src="img/bullets.png" alt="">
+                    </div>
+                    <div class="section-content">
+                        <div class="company-info">
+                            <p class="small-title">ABOUT THE NETWORK</p>
+
+                            <h3><span class="surrounded white">The</span>Company</h3>
+
+                            <p>
+                                For 12 years we have been providing audit and warranty, financial advice,
+                                risk advice, taxes and related services to select clients.
+                            </p>
+
+                            <!-- Inizio Company Features Container -->
+                            <div class="features-container">
+                                <div class="feature" v-for="feature in features">
+                                    <i :class="feature.icon"></i>
+                                    <h4>{{feature.name}}</h4>
+                                    <p>
+                                        {{feature.description}}
+                                    </p>
+                                </div>
+                            </div>
+                            <!-- Fine Company Features Container -->
+
+                            <div class="buttons">
+                                <div class="btn">Get in Touch</div>
+                                <div class="btn-empty">Read More</div>
+                            </div>
+                        </div>
+
+                        <div class="successfull-guy-pic">
+                            <img src="img/about-4.jpg" alt="">
+                        </div>
+                    </div>
+
+                    <div class="bullets bottom">
+                        <img src="img/bullets.png" alt="">
+                    </div>
+                </section>
+                <!-- Fine Company Section -->
             </main>
             <!-- FINE MAIN -->
         </div>
