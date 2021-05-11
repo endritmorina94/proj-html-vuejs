@@ -178,6 +178,45 @@
                     </div>
                 </section>
                 <!-- Fine Company Section -->
+
+                <!-- Inizio Projects Section -->
+                <section class="projects">
+                    <div class="container text-center">
+
+                        <div class="small-title">
+                            WE DO MORE FOR EVERYONE
+                        </div>
+
+                        <h3>
+                            Actions &<span class="surrounded">Projects</span>
+                        </h3>
+
+                        <ul class="project-types">
+                            <li class="all active">All</li>
+                            <li v-for="project in projects">{{project.type}}</li>
+                        </ul>
+
+                        <div class="projects-container">
+                            <div class="project" v-for="project in projects">
+                                <div class="arrow">
+                                    <i class="fas fa-arrow-right"></i>
+                                </div>
+                                <img :src="project.img" alt="project.name">
+
+                                <h4>
+                                    {{project.name}}
+                                </h4>
+
+                                <p>
+                                    {{project.description}}
+                                </p>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </section>
+                <!-- Fine Projects Section -->
             </main>
             <!-- FINE MAIN -->
         </div>

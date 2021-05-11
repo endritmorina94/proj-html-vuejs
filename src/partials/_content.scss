@@ -78,7 +78,7 @@
                     margin-right: 40px;
 
                     h4 {
-                        color: white;
+                        color: $opaque-white;
                         display: inline-block;
                     }
 
@@ -94,10 +94,11 @@
 
                 .btn {
                     margin-right: 20px;
+                    color: $opaque-white;
                 }
 
                 .btn-empty {
-                    color: white;
+                    color: $opaque-white;
                 }
             }
         }
@@ -113,12 +114,11 @@
     }
 
     .bullets {
-        position: absolute;
+        @include center-horizontally;
         width: 10%;
         height: 58px;
         overflow: hidden;
-        left: 50%;
-        transform: translateX(-50%);
+        opacity: 0.2;
 
         &.top {
             top: -28px;
@@ -130,3 +130,100 @@
     }
 }
 //Fine Company Section
+
+//Inizio Projects Section
+.projects {
+    padding: 120px 0;
+
+    .project-types li{
+        display: inline-block;
+        text-transform: uppercase;
+        font-weight: 500;
+        padding: 12px 10px;
+        margin: 0 10px;
+        cursor: pointer;
+
+        &.active {
+            color: $primary-title-color;
+            border-radius: 4px;
+            background-color: transparentize($secondary-title-color, 0.85);
+        }
+
+        &:hover {
+            color: $primary-title-color;
+        }
+    }
+
+    .projects-container {
+        @include d-flex-start;
+        flex-wrap: wrap;
+        margin-right: -25px;
+        margin-top: 30px;
+
+        .project {
+            width: calc(100% / 3 - 25px);
+            height: 360px;
+            margin-right: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            overflow: hidden;
+            position: relative;
+            color: $opaque-white;
+
+            .arrow {
+                position: absolute;
+                top: 40px;
+                right: 40px;
+                z-index: 1;
+                font-size: 22px;
+                opacity: 0;
+                transition: 0.3s opacity;
+                cursor: pointer;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                filter: brightness(0.6);
+                transition: 0.3s filter, 0.3s transform;
+            }
+
+            h4 {
+                @include center-horizontally;
+                bottom: 20px;
+                width: 88%;
+                color: $opaque-white;
+                transition: 0.3s bottom;
+                cursor: pointer;
+            }
+
+            p {
+                @include center-horizontally;
+                bottom: 0;
+                width: 65%;
+                opacity: 0;
+                transition: 0.3s bottom, 0.3s opacity;
+                cursor: pointer;
+            }
+
+            &:hover .arrow {
+                opacity: 1;
+            }
+
+            &:hover img {
+                transform: scale(1.10);
+                filter: brightness(0.4) blur(2px);
+            }
+
+            &:hover h4 {
+                bottom: 80px;
+            }
+
+            &:hover p {
+                bottom: 40px;
+                opacity: 1;
+            }
+        }
+    }
+}
+//Fine Projects Section

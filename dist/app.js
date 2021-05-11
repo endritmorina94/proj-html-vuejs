@@ -61,6 +61,37 @@ var app = new Vue({
       name: "Expertise",
       description: "Lorem ipsum dolor si amet consectetur adipiscing elit.",
       icon: "fas fa-graduation-cap"
+    }],
+    projects: [{
+      type: "Institutional",
+      name: "Academic professional program in social media",
+      description: "Lorem ipsum dolor si amet, consectetur adipiscing elit.",
+      img: "img/project-1.jpg"
+    }, {
+      type: "Social",
+      name: "President's speech at the annual meeting",
+      description: "Lorem ipsum dolor si amet, consectetur adipiscing elit.",
+      img: "img/project-2.jpg"
+    }, {
+      type: "Events",
+      name: "International business trip in Shangai",
+      description: "Lorem ipsum dolor si amet, consectetur adipiscing elit.",
+      img: "img/project-3.jpg"
+    }, {
+      type: "Innovation",
+      name: "Technology workshop with education theme",
+      description: "Lorem ipsum dolor si amet, consectetur adipiscing elit.",
+      img: "img/project-4.jpg"
+    }, {
+      type: "Environment",
+      name: "Donation of clothes and food to the partner NGO",
+      description: "Lorem ipsum dolor si amet, consectetur adipiscing elit.",
+      img: "img/project-5.jpg"
+    }, {
+      type: "Technology",
+      name: "Confraternization of the procurement team",
+      description: "Lorem ipsum dolor si amet, consectetur adipiscing elit.",
+      img: "img/project-6.jpg"
     }]
   },
   methods: {},

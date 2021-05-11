@@ -35,3 +35,9 @@
     position: relative;
     bottom: 2px;
 }
+
+@mixin center-horizontally {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
