@@ -631,21 +631,21 @@ nav .container ul li a {
   filter: brightness(7);
 }
 
-.get-in-touch {
+#get-in-touch {
   padding: 140px 0;
 }
-.get-in-touch .section-content {
+#get-in-touch .section-content {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
 }
-.get-in-touch .section-content .form-container {
+#get-in-touch .section-content .form-container {
   width: 80%;
 }
-.get-in-touch .section-content .form-container h3 {
+#get-in-touch .section-content .form-container h3 {
   margin-bottom: 23px;
 }
-.get-in-touch .section-content .form-container .form {
+#get-in-touch .section-content .form-container .form {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -653,13 +653,13 @@ nav .container ul li a {
   font-weight: 400;
   position: relative;
 }
-.get-in-touch .section-content .form-container .form label {
+#get-in-touch .section-content .form-container .form label {
   display: none;
 }
-.get-in-touch .section-content .form-container .form input,
-.get-in-touch .section-content .form-container .form .select-container,
-.get-in-touch .section-content .form-container .form select,
-.get-in-touch .section-content .form-container .form textarea {
+#get-in-touch .section-content .form-container .form input,
+#get-in-touch .section-content .form-container .form .select-container,
+#get-in-touch .section-content .form-container .form select,
+#get-in-touch .section-content .form-container .form textarea {
   width: calc(100% / 2 - 8px);
   background-color: #ECECEC;
   border: 0;
@@ -672,29 +672,29 @@ nav .container ul li a {
   font-family: "Montserrat", sans-serif;
   color: #757575;
 }
-.get-in-touch .section-content .form-container .form input::-moz-placeholder, .get-in-touch .section-content .form-container .form .select-container::-moz-placeholder, .get-in-touch .section-content .form-container .form select::-moz-placeholder, .get-in-touch .section-content .form-container .form textarea::-moz-placeholder {
+#get-in-touch .section-content .form-container .form input::-moz-placeholder, #get-in-touch .section-content .form-container .form .select-container::-moz-placeholder, #get-in-touch .section-content .form-container .form select::-moz-placeholder, #get-in-touch .section-content .form-container .form textarea::-moz-placeholder {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
-.get-in-touch .section-content .form-container .form input:-ms-input-placeholder, .get-in-touch .section-content .form-container .form .select-container:-ms-input-placeholder, .get-in-touch .section-content .form-container .form select:-ms-input-placeholder, .get-in-touch .section-content .form-container .form textarea:-ms-input-placeholder {
+#get-in-touch .section-content .form-container .form input:-ms-input-placeholder, #get-in-touch .section-content .form-container .form .select-container:-ms-input-placeholder, #get-in-touch .section-content .form-container .form select:-ms-input-placeholder, #get-in-touch .section-content .form-container .form textarea:-ms-input-placeholder {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
-.get-in-touch .section-content .form-container .form input::placeholder,
-.get-in-touch .section-content .form-container .form .select-container::placeholder,
-.get-in-touch .section-content .form-container .form select::placeholder,
-.get-in-touch .section-content .form-container .form textarea::placeholder {
+#get-in-touch .section-content .form-container .form input::placeholder,
+#get-in-touch .section-content .form-container .form .select-container::placeholder,
+#get-in-touch .section-content .form-container .form select::placeholder,
+#get-in-touch .section-content .form-container .form textarea::placeholder {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
-.get-in-touch .section-content .form-container .form input:focus,
-.get-in-touch .section-content .form-container .form .select-container:focus,
-.get-in-touch .section-content .form-container .form select:focus,
-.get-in-touch .section-content .form-container .form textarea:focus {
+#get-in-touch .section-content .form-container .form input:focus,
+#get-in-touch .section-content .form-container .form .select-container:focus,
+#get-in-touch .section-content .form-container .form select:focus,
+#get-in-touch .section-content .form-container .form textarea:focus {
   background-color: #dfdfdf;
   color: #5c5c5c;
 }
-.get-in-touch .section-content .form-container .form img {
+#get-in-touch .section-content .form-container .form img {
   width: 15px;
   height: auto;
   position: absolute;
@@ -702,12 +702,12 @@ nav .container ul li a {
   left: calc(100% / 2 - 32px);
   cursor: pointer;
 }
-.get-in-touch .section-content .form-container .form .select-container {
+#get-in-touch .section-content .form-container .form .select-container {
   padding: 0;
   overflow: hidden;
   position: relative;
 }
-.get-in-touch .section-content .form-container .form .select-container select {
+#get-in-touch .section-content .form-container .form .select-container select {
   width: 100%;
   height: 100%;
   padding: 0 10px;
@@ -715,36 +715,36 @@ nav .container ul li a {
   position: relative;
   cursor: pointer;
 }
-.get-in-touch .section-content .form-container .form .select-container i {
+#get-in-touch .section-content .form-container .form .select-container i {
   position: absolute;
   top: 17px;
   right: 15px;
   z-index: 2;
 }
-.get-in-touch .section-content .form-container .form textarea {
+#get-in-touch .section-content .form-container .form textarea {
   width: 100%;
   resize: none;
   margin-bottom: 30px;
 }
-.get-in-touch .section-content .company-info {
+#get-in-touch .section-content .company-info {
   margin-left: 60px;
 }
-.get-in-touch .section-content .company-info h4 {
+#get-in-touch .section-content .company-info h4 {
   font-size: 24px;
   margin-bottom: 23px;
 }
-.get-in-touch .section-content .company-info p:not(last-child) {
+#get-in-touch .section-content .company-info p:not(last-child) {
   margin-bottom: 23px;
 }
-.get-in-touch .section-content .company-info .contacts {
+#get-in-touch .section-content .company-info .contacts {
   font-size: 20px;
   color: #058283;
 }
-.get-in-touch .section-content .company-info .contacts div {
+#get-in-touch .section-content .company-info .contacts div {
   margin-bottom: 18px;
   cursor: pointer;
 }
-.get-in-touch .section-content .company-info .contacts div i {
+#get-in-touch .section-content .company-info .contacts div i {
   width: 44px;
   height: auto;
   text-align: center;
@@ -753,7 +753,7 @@ nav .container ul li a {
   border-radius: 50%;
   margin-right: 5px;
 }
-.get-in-touch .section-content .company-info .contacts div:last-child {
+#get-in-touch .section-content .company-info .contacts div:last-child {
   margin-bottom: 30px;
 }
 
