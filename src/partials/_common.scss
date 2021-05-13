@@ -4,6 +4,10 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: $standard-text-font;
     color: $primary-paragraph-color;
@@ -21,7 +25,7 @@ img {
     margin: 0 auto;
 }
 
-h2 {
+h1, h2 {
     font-family: $title-font;
     font-size: 73px;
     font-weight: 900;
@@ -104,7 +108,7 @@ a {
 
 .surrounded {
     color: $primary_color;
-    padding: 0 14px;
+    padding: 0 16px;
     border-radius: 4px;
     margin-left: 8px;
     background-color: transparentize($primary_color, 0.85);

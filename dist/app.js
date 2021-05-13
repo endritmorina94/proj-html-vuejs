@@ -10,6 +10,7 @@
 var app = new Vue({
   el: '#root',
   data: {
+    //Informazioni Azienda Proprietaria
     companyInfo: {
       name: "Example Inc.",
       info_1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -23,7 +24,9 @@ var app = new Vue({
       twitter_link: "#",
       linkedin_link: "#"
     },
-    sections: ["Home", "Services", "About", "Projects", "Results"],
+    //Sezioni Pagina
+    sections: ["home", "services", "about", "projects", "results"],
+    //Tipi di Servizi Offerti
     services: [{
       name: "Audit & Assurance",
       description: "Lorem ipsum dolor si amet consectetur adipiscing elit.",
@@ -49,6 +52,7 @@ var app = new Vue({
       description: "Lorem ipsum dolor si amet consectetur adipiscing elit.",
       icon: "fas fa-inbox"
     }],
+    //Caratteristiche dell'Azienda
     features: [{
       name: "Tradition",
       description: "Lorem ipsum dolor si amet consectetur adipiscing elit.",
@@ -66,6 +70,7 @@ var app = new Vue({
       description: "Lorem ipsum dolor si amet consectetur adipiscing elit.",
       icon: "fas fa-graduation-cap"
     }],
+    //Progetti dell'Azienda
     projects: [{
       type: "Institutional",
       name: "Academic professional program in social media",
@@ -97,6 +102,7 @@ var app = new Vue({
       description: "Lorem ipsum dolor si amet, consectetur adipiscing elit.",
       img: "img/project-6.jpg"
     }],
+    //Numeri dell'Azienda
     numbers: [{
       type: "Certifications",
       count: 128
@@ -110,6 +116,7 @@ var app = new Vue({
       type: "Countries Served",
       count: 94
     }],
+    //Partners dell'Azienda
     partners: [{
       name: "jQuery",
       img: "img/logo-4.png"
@@ -125,10 +132,8 @@ var app = new Vue({
     }, {
       name: "Pingdom",
       img: "img/logo-3.png"
-    }, {
-      name: "jQuery",
-      img: "img/logo-4.png"
     }],
+    //Link del Footer
     footerLinks: [{
       title: "About",
       links: ["The Company", "Institutional", "Social & Events", "Innovation", "Environment", "Technology"]
@@ -138,10 +143,49 @@ var app = new Vue({
     }, {
       title: "Support",
       links: ["Responsibility", "Terms of Use", "About Cookies", "Privacy Policy", "Accessibility", "Information"]
-    }]
+    }],
+    //Variabile flag per scrolling
+    scrolled: false
   },
-  methods: {},
-  mounted: function mounted() {}
+  methods: {
+    //Funzione/listener per lo scrolling della pagina
+    handleScroll: function handleScroll() {
+      this.scrolled = window.scrollY > 0;
+    }
+  },
+  created: function created() {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed: function destroyed() {
+    window.removeEventListener('scroll', this.handleScroll);
+  },
+  mounted: function mounted() {
+    //Primo Slider, contenuto nel Banner
+    var swiper = new Swiper('.swiper-container', {
+      speed: 300,
+      autoplay: {
+        delay: 10000,
+        disableOnInteraction: true
+      },
+      parallax: true,
+      pagination: {
+        el: '.swiper-pagination'
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      }
+    }); //Secondo Slider, contenuto nella sezione Results
+
+    var swiper2 = new Swiper('.swiper-container-2', {
+      speed: 300,
+      slidesPerView: 6,
+      spaceBetween: 0,
+      loop: true
+    }); //Particles
+
+    particlesJS.load('particles-js', 'src/particles-config.json');
+  }
 });
 
 /***/ }),

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Montserrat", sans-serif;
   color: #606D75;
@@ -21,7 +25,7 @@ img {
   margin: 0 auto;
 }
 
-h2 {
+h1, h2 {
   font-family: "Poppins", sans-serif;
   font-size: 73px;
   font-weight: 900;
@@ -102,7 +106,7 @@ a {
 
 .surrounded {
   color: #058283;
-  padding: 0 14px;
+  padding: 0 16px;
   border-radius: 4px;
   margin-left: 8px;
   background-color: rgba(5, 130, 131, 0.15);
@@ -152,13 +156,18 @@ a {
 }
 
 nav {
-  background-color: trasparent;
+  width: 100%;
+  position: fixed;
+  top: 50px;
+  left: 0;
+  transition: 0.2s top, 0.2s background-color;
+  z-index: 2;
 }
 nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 19px 0 0;
+  padding: 10px 0 0;
 }
 nav .container .logo {
   font-size: 19.5px;
@@ -188,68 +197,153 @@ nav .container ul li a {
   transition: 0.5s color, 0.5s background-color;
 }
 
+.fixedTop {
+  top: 0;
+  background-color: white;
+  padding-bottom: 10px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+  transition: 0.2s top, 0.2s background-color;
+}
+
 .banner {
   width: 100%;
-  height: calc(100vh - 114px);
+  height: calc(100vh - 50px);
   position: relative;
   overflow: hidden;
 }
-.banner .bg-image {
+.banner .swiper-container {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.banner .swiper-container #particles-js {
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.8;
+}
+.banner .swiper-container .parallax-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 200%;
-  height: 110%;
+  height: 100%;
   background-image: url("../img/bg-parallax.png");
   background-size: cover;
   background-position: center;
-  position: absolute;
-  bottom: 0;
-  left: -50%;
-  z-index: -1;
 }
-.banner .container {
+.banner .swiper-container .container {
   height: 100%;
   display: flex;
   justify-content: center;
-  align-items: center;
   flex-direction: column;
 }
-.banner .container .surrounded {
-  margin-left: 10px;
+.banner .swiper-container .container .surrounded {
+  margin-left: 0;
 }
-.banner .container p {
-  width: 42%;
-  text-align: center;
-  margin: 20px 0 40px;
-  font-size: 18px;
+.banner .swiper-container .container p {
+  font-size: 19px;
+  line-height: 30px;
 }
-.banner h2 {
-  color: #21333E;
-}
-.banner .btn-empty {
+.banner .swiper-container .btn-empty {
   margin-left: 20px;
 }
-
-.services {
-  background-color: #EEF1ED;
+.banner .swiper-container .left .container {
+  align-items: flex-start;
 }
-.services .container {
+.banner .swiper-container .left .container .slide-content {
+  width: 50%;
+  text-align: left;
+}
+.banner .swiper-container .left .container .slide-content h1 {
+  line-height: 90px;
+}
+.banner .swiper-container .left .container .slide-content h1 span {
+  margin-left: 0;
+}
+.banner .swiper-container .left .container .slide-content p {
+  margin: 20px auto 40px;
+}
+.banner .swiper-container .center .container {
+  align-items: center;
+}
+.banner .swiper-container .center .container .slide-content {
+  width: 50%;
+  text-align: center;
+}
+.banner .swiper-container .center .container .slide-content h2 {
+  line-height: 90px;
+}
+.banner .swiper-container .center .container .slide-content p {
+  width: 85%;
+  margin: 20px auto 40px;
+}
+.banner .swiper-container .right .container {
+  align-items: flex-end;
+}
+.banner .swiper-container .right .container .slide-content {
+  width: 50%;
+  text-align: left;
+}
+.banner .swiper-container .right .container .slide-content h2 {
+  line-height: 90px;
+}
+.banner .swiper-container .right .container .slide-content p {
+  margin: 20px 0 40px;
+}
+.banner .swiper-container .swiper-pagination {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+  position: absolute;
+  top: calc(50% - 50px);
+  left: 97%;
+}
+.banner .swiper-container .swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 35px;
+  margin-bottom: 8px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid #058283;
+  opacity: 0.5;
+  display: block;
+}
+.banner .swiper-container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: #058283;
+  opacity: 1;
+}
+
+#services {
+  background-color: #EEF4ED;
+}
+#services .container {
   padding: 130px 0;
 }
-.services .container .services-info {
+#services .container .services-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.services .container .services-info .btn {
+#services .container .services-info .btn {
   margin-left: 150px;
 }
-.services .container .services-container {
+#services .container .services-container {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   margin-right: -30px;
   margin-top: 50px;
 }
-.services .container .services-container .service {
+#services .container .services-container .service {
   width: calc(100% / 3 - 30px);
   background-color: #FFFFFF;
   padding: 55px 40px;
@@ -259,18 +353,18 @@ nav .container ul li a {
   position: relative;
   transition: 0.5s transform;
 }
-.services .container .services-container .service .arrow {
+#services .container .services-container .service .arrow {
   position: absolute;
   top: 55px;
   right: 45px;
   cursor: pointer;
   z-index: 1;
 }
-.services .container .services-container .service .arrow i {
+#services .container .services-container .service .arrow i {
   font-size: 23px;
   color: rgba(5, 130, 131, 0.5);
 }
-.services .container .services-container .service .circle {
+#services .container .services-container .service .circle {
   position: absolute;
   top: 55px;
   right: 44px;
@@ -279,17 +373,17 @@ nav .container ul li a {
   height: 23px;
   border-radius: 50%;
 }
-.services .container .services-container .service i {
+#services .container .services-container .service i {
   font-size: 35px;
   color: #058283;
 }
-.services .container .services-container .service:hover {
+#services .container .services-container .service:hover {
   transform: translateY(-10px);
 }
-.services .container .services-container .service:hover .arrow i {
+#services .container .services-container .service:hover .arrow i {
   color: #058283;
 }
-.services .container .services-container .service:hover .circle {
+#services .container .services-container .service:hover .circle {
   -webkit-animation: pulse 2s infinite;
           animation: pulse 2s infinite;
 }
@@ -396,10 +490,10 @@ nav .container ul li a {
   bottom: -32px;
 }
 
-.projects {
+#projects {
   padding: 130px 0;
 }
-.projects .project-types li {
+#projects .project-types li {
   display: inline-block;
   text-transform: uppercase;
   font-weight: 500;
@@ -407,21 +501,21 @@ nav .container ul li a {
   margin: 0 10px;
   cursor: pointer;
 }
-.projects .project-types li.active {
+#projects .project-types li.active {
   color: #21333E;
   border-radius: 4px;
   background-color: rgba(5, 130, 131, 0.15);
 }
-.projects .project-types li:hover {
+#projects .project-types li:hover {
   color: #21333E;
 }
-.projects .projects-container {
+#projects .projects-container {
   display: flex;
   justify-content: flex-start;
   flex-wrap: wrap;
   margin: 30px -30px 30px 0;
 }
-.projects .projects-container .project {
+#projects .projects-container .project {
   width: calc(100% / 3 - 30px);
   height: 360px;
   margin-right: 30px;
@@ -431,7 +525,7 @@ nav .container ul li a {
   position: relative;
   color: #F9F9F9;
 }
-.projects .projects-container .project .arrow {
+#projects .projects-container .project .arrow {
   position: absolute;
   top: 40px;
   right: 40px;
@@ -441,13 +535,13 @@ nav .container ul li a {
   transition: 0.3s opacity;
   cursor: pointer;
 }
-.projects .projects-container .project img {
+#projects .projects-container .project img {
   width: 100%;
   height: 100%;
   filter: brightness(0.6);
   transition: 0.3s filter, 0.3s transform;
 }
-.projects .projects-container .project h4 {
+#projects .projects-container .project h4 {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -457,7 +551,7 @@ nav .container ul li a {
   transition: 0.3s bottom;
   cursor: pointer;
 }
-.projects .projects-container .project p {
+#projects .projects-container .project p {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
@@ -467,25 +561,25 @@ nav .container ul li a {
   transition: 0.3s bottom, 0.3s opacity;
   cursor: pointer;
 }
-.projects .projects-container .project:hover .arrow {
+#projects .projects-container .project:hover .arrow {
   opacity: 1;
 }
-.projects .projects-container .project:hover img {
+#projects .projects-container .project:hover img {
   transform: scale(1.1);
   filter: brightness(0.4) blur(2px);
 }
-.projects .projects-container .project:hover h4 {
+#projects .projects-container .project:hover h4 {
   bottom: 100px;
 }
-.projects .projects-container .project:hover p {
+#projects .projects-container .project:hover p {
   bottom: 50px;
   opacity: 1;
 }
 
-.results {
+#results {
   background-color: #111117;
 }
-.results .parallax {
+#results .parallax {
   padding: 130px 0;
   background-image: url("../img/bg-7.jpg");
   background-attachment: fixed;
@@ -493,45 +587,47 @@ nav .container ul li a {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.results .parallax h3 {
+#results .parallax h3 {
   color: white;
 }
-.results .parallax .numbers-row {
+#results .parallax .numbers-row {
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
 }
-.results .parallax .numbers-row .number {
+#results .parallax .numbers-row .number {
   width: calc(100% / 4 - 50px);
   margin-top: 80px;
 }
-.results .parallax .numbers-row .number .count {
+#results .parallax .numbers-row .number .count {
   color: #00A6A6;
   font-size: 37px;
   font-weight: 700;
 }
-.results .parallax .numbers-row .number h4 {
+#results .parallax .numbers-row .number h4 {
   color: #F9F9F9;
   margin-top: 25px;
 }
-.results .partners-list {
+#results .partners-list {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 130px 0;
+  overflow: hidden;
 }
-.results .partners-list li {
+#results .partners-list .swiper-slide {
   height: 25px;
   cursor: pointer;
+  text-align: center;
 }
-.results .partners-list li img {
+#results .partners-list .swiper-slide img {
   height: 100%;
   width: auto;
   filter: brightness(4);
   transition: 0.5s filter;
 }
-.results .partners-list li:hover img {
+#results .partners-list .swiper-slide:hover img {
   filter: brightness(7);
 }
 
@@ -555,11 +651,13 @@ nav .container ul li a {
   flex-wrap: wrap;
   margin-top: 60px;
   font-weight: 400;
+  position: relative;
 }
 .get-in-touch .section-content .form-container .form label {
   display: none;
 }
 .get-in-touch .section-content .form-container .form input,
+.get-in-touch .section-content .form-container .form .select-container,
 .get-in-touch .section-content .form-container .form select,
 .get-in-touch .section-content .form-container .form textarea {
   width: calc(100% / 2 - 8px);
@@ -574,28 +672,54 @@ nav .container ul li a {
   font-family: "Montserrat", sans-serif;
   color: #757575;
 }
-.get-in-touch .section-content .form-container .form input::-moz-placeholder, .get-in-touch .section-content .form-container .form select::-moz-placeholder, .get-in-touch .section-content .form-container .form textarea::-moz-placeholder {
+.get-in-touch .section-content .form-container .form input::-moz-placeholder, .get-in-touch .section-content .form-container .form .select-container::-moz-placeholder, .get-in-touch .section-content .form-container .form select::-moz-placeholder, .get-in-touch .section-content .form-container .form textarea::-moz-placeholder {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
-.get-in-touch .section-content .form-container .form input:-ms-input-placeholder, .get-in-touch .section-content .form-container .form select:-ms-input-placeholder, .get-in-touch .section-content .form-container .form textarea:-ms-input-placeholder {
+.get-in-touch .section-content .form-container .form input:-ms-input-placeholder, .get-in-touch .section-content .form-container .form .select-container:-ms-input-placeholder, .get-in-touch .section-content .form-container .form select:-ms-input-placeholder, .get-in-touch .section-content .form-container .form textarea:-ms-input-placeholder {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
 .get-in-touch .section-content .form-container .form input::placeholder,
+.get-in-touch .section-content .form-container .form .select-container::placeholder,
 .get-in-touch .section-content .form-container .form select::placeholder,
 .get-in-touch .section-content .form-container .form textarea::placeholder {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
 }
 .get-in-touch .section-content .form-container .form input:focus,
+.get-in-touch .section-content .form-container .form .select-container:focus,
 .get-in-touch .section-content .form-container .form select:focus,
 .get-in-touch .section-content .form-container .form textarea:focus {
   background-color: #dfdfdf;
   color: #5c5c5c;
 }
-.get-in-touch .section-content .form-container .form select {
-  color: #606D75;
+.get-in-touch .section-content .form-container .form img {
+  width: 15px;
+  height: auto;
+  position: absolute;
+  top: 16px;
+  left: calc(100% / 2 - 32px);
+  cursor: pointer;
+}
+.get-in-touch .section-content .form-container .form .select-container {
+  padding: 0;
+  overflow: hidden;
+  position: relative;
+}
+.get-in-touch .section-content .form-container .form .select-container select {
+  width: 100%;
+  height: 100%;
+  padding: 0 10px;
+  width: 110%;
+  position: relative;
+  cursor: pointer;
+}
+.get-in-touch .section-content .form-container .form .select-container i {
+  position: absolute;
+  top: 17px;
+  right: 15px;
+  z-index: 2;
 }
 .get-in-touch .section-content .form-container .form textarea {
   width: 100%;
@@ -707,6 +831,11 @@ nav .container ul li a {
 .footer-top .container .card.muted .btn-empty {
   color: #C0C3D0;
   margin-top: 7px;
+}
+
+.swiper-container {
+  width: 600px;
+  height: 300px;
 }
 
 .footer-bottom {

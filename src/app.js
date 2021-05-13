@@ -1,7 +1,10 @@
+
+
 var app = new Vue(
     {
         el: '#root',
         data: {
+            //Informazioni Azienda Proprietaria
             companyInfo: {
                 name: "Example Inc.",
                 info_1: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
@@ -16,14 +19,16 @@ var app = new Vue(
                 linkedin_link: "#"
             },
 
+            //Sezioni Pagina
             sections: [
-                "Home",
-                "Services",
-                "About",
-                "Projects",
-                "Results"
+                "home",
+                "services",
+                "about",
+                "projects",
+                "results"
             ],
 
+            //Tipi di Servizi Offerti
             services: [
                 {
                     name: "Audit & Assurance",
@@ -57,6 +62,7 @@ var app = new Vue(
                 }
             ],
 
+            //Caratteristiche dell'Azienda
             features: [
                 {
                     name: "Tradition",
@@ -80,6 +86,7 @@ var app = new Vue(
                 }
             ],
 
+            //Progetti dell'Azienda
             projects: [
                 {
                     type: "Institutional",
@@ -119,6 +126,7 @@ var app = new Vue(
                 }
             ],
 
+            //Numeri dell'Azienda
             numbers: [
                 {
                     type: "Certifications",
@@ -138,6 +146,7 @@ var app = new Vue(
                 }
             ],
 
+            //Partners dell'Azienda
             partners: [
                 {
                     name: "jQuery",
@@ -158,13 +167,10 @@ var app = new Vue(
                 {
                     name: "Pingdom",
                     img: "img/logo-3.png"
-                },
-                {
-                    name: "jQuery",
-                    img: "img/logo-4.png"
                 }
             ],
 
+            //Link del Footer
             footerLinks: [
                 {
                     title: "About",
@@ -184,11 +190,57 @@ var app = new Vue(
                         "Responsibility", "Terms of Use", "About Cookies", "Privacy Policy", "Accessibility", "Information"
                     ]
                 }
-            ]
+            ],
+
+            //Variabile flag per scrolling
+            scrolled: false
+
         },
+
         methods: {
+            //Funzione/listener per lo scrolling della pagina
+            handleScroll () {
+                this.scrolled = window.scrollY > 0;
+            }
+
         },
+
+        created () {
+            window.addEventListener('scroll', this.handleScroll);
+        },
+
+        destroyed () {
+            window.removeEventListener('scroll', this.handleScroll);
+        },
+
         mounted() {
+            //Primo Slider, contenuto nel Banner
+            const swiper = new Swiper('.swiper-container', {
+                speed: 300,
+                autoplay: {
+                    delay: 10000,
+                    disableOnInteraction: true,
+                },
+                parallax: true,
+                pagination: {
+                    el: '.swiper-pagination',
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+
+            //Secondo Slider, contenuto nella sezione Results
+            const swiper2 = new Swiper('.swiper-container-2', {
+                speed: 300,
+                slidesPerView: 6,
+                spaceBetween: 0,
+                loop: true
+            });
+
+            //Particles
+            particlesJS.load('particles-js', 'src/particles-config.json');
         }
     }
 );
