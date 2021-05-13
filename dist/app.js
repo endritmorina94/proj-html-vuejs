@@ -184,7 +184,7 @@ var app = new Vue({
       loop: true
     }); //Particles
 
-    particlesJS.load('particles-js', 'src/particles-config.json');
+    particlesJS.load('particles-js', '../src/particles-config.json');
   }
 });
 

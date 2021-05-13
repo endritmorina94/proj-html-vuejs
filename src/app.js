@@ -1,5 +1,4 @@
 
-
 var app = new Vue(
     {
         el: '#root',
@@ -240,7 +239,7 @@ var app = new Vue(
             });
 
             //Particles
-            particlesJS.load('particles-js', 'src/particles-config.json');
+            particlesJS.load('particles-js', '../src/particles-config.json');
         }
     }
 );
