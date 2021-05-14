@@ -72,7 +72,9 @@
                 <div class="container">
 
                     <div class="logo">
-                        <span class="logo-first-half">NEX</span><span>GEN</span>
+                        <a href="#home">
+                            <span class="logo-first-half">NEX</span><span>GEN</span>
+                        </a>
                     </div>
 
                     <ul>
@@ -377,7 +379,7 @@
                                 <div class="select-container">
                                     <select>
                                         <option value="" selected disabled>More Info</option>
-                                        <option v-for="link in footerLinks[1].links">{{link}}</option>
+                                        <option v-for="link in footerLinks[1].links">{{link.name}}</option>
 
                                         <option value="">Other</option>
                                     </select>
@@ -432,7 +434,9 @@
                     <div class="card muted">
 
                         <div class="logo">
-                            <span>NEX</span>GEN
+                            <a href="#home">
+                                <span>NEX</span>GEN
+                            </a>
                         </div>
 
                         <p>

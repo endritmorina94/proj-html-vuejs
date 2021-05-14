@@ -48,13 +48,16 @@
 
                 .logo {
                     @include logo;
-                    color: $secondary-paragraph-color;
                     font-size: 25px;
 
-                    span {
-                        @include logo-surrended;
-                        border-top-left-radius: 23px;
-                        border-bottom-left-radius: 23px;
+                    a{
+                        color: $secondary-paragraph-color;
+
+                        span {
+                            @include logo-surrended;
+                            border-top-left-radius: 23px;
+                            border-bottom-left-radius: 23px;
+                        }
                     }
                 }
 
