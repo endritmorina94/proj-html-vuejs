@@ -93,31 +93,39 @@
 //Fine Services Section
 
 //Inizio About Section
-.company {
+#about {
     background-color: $bg-color-3;
     color:$secondary-paragraph-color;
     position: relative;
 
-    .section-content {
-        @include d-flex-end;
-        align-items: center;
+    .container {
 
         .company-info {
-            width: 37.5%;
+            width: 50%;
+            padding: 130px 30px 130px 0;
+            display: flex;
+            justify-content: flex-end;
 
             h3 {
                 color: white;
             }
 
+            .company-info-content {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+            }
+
             .features-container{
-                @include d-flex-start;
+                @include d-flex-sb;
                 flex-wrap: wrap;
-                margin-top: 40px;
+                margin-top: 50px;
 
                 .feature {
-                    width: 40%;
+                    width: 50%;
                     margin-bottom: 40px;
-                    margin-right: 40px;
 
                     h4 {
                         color: $opaque-white;
@@ -148,20 +156,28 @@
 
         .successfull-guy-pic {
             width: 50%;
-            overflow: hidden;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 0;
 
             img {
-                width: 120%;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
             }
         }
     }
 
     .bullets {
         @include center-horizontally;
-        width: 10%;
+        width: 150px;
         height: 64px;
         overflow: hidden;
         opacity: 0.2;
+        z-index: 1;
 
         &.top {
             top: -32px;

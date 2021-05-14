@@ -20,11 +20,11 @@
     <link rel="stylesheet" href="dist/app.css">
 
     <!-- Particles -->
-    <script src="src/particles.js"></script>
+    <script src="dist/particles.js"></script>
     <!-- Swiper Slider JS-->
     <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <!-- Foglio JS -->
+    <!-- Vue -->
     <script src="https://cdn.jsdelivr.net/npm/vue"></script>
 </head>
 
@@ -33,7 +33,7 @@
         <!-- INIZIO HEADER -->
         <header>
             <!-- Inizio Info Top Bar -->
-            <div class="info-top-bar">
+            <div class="info-top-bar" id="home">
                 <div class="container">
 
                     <div class="timetable">
@@ -76,7 +76,9 @@
                     </div>
 
                     <ul>
-                        <li v-for="section in sections">
+                        <li v-for="(section, index) in sections"
+                        :class="{'active' : checkActiveSection(index) }"
+                        @click="changeSectionIndex(index)">
                             <a :href="`#${section}`">{{section}}</a>
                         </li>
 
@@ -89,7 +91,7 @@
             <!-- Fine Navigator -->
 
             <!-- Inizio Banner -->
-            <div class="banner" id="home">
+            <div class="banner">
 
                 <!-- Inizio Slider -->
                 <div class="swiper-container">
@@ -110,8 +112,8 @@
                                     </p>
 
                                     <div class="buttons">
-                                        <div class="btn">Get in Touch</div>
-                                        <div class="btn-empty">Read More</div>
+                                        <a class="btn" href="#get-in-touch">Get in Touch</a>
+                                        <a class="btn-empty" href="#services">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -129,8 +131,8 @@
                                     </p>
 
                                     <div class="buttons">
-                                        <div class="btn">Get in Touch</div>
-                                        <div class="btn-empty">Read More</div>
+                                            <a class="btn" href="#get-in-touch">Get in Touch</a>
+                                            <a class="btn-empty" href="#services">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -148,8 +150,8 @@
                                     </p>
 
                                     <div class="buttons">
-                                        <div class="btn">Get in Touch</div>
-                                        <div class="btn-empty">Read More</div>
+                                        <a class="btn" href="#get-in-touch">Get in Touch</a>
+                                        <a class="btn-empty" href="#services">Read More</a>
                                     </div>
                                 </div>
                             </div>
@@ -167,7 +169,6 @@
 
         <!-- INIZIO MAIN -->
         <main>
-
             <!-- Inizio Services Section -->
             <section id="services">
                 <div class="container">
@@ -207,36 +208,39 @@
             <!-- Fine Services Section -->
 
             <!-- Inizio About Section -->
-            <section class="company" id="about">
+            <section id="about">
                 <div class="bullets top">
                     <img src="img/bullets.png" alt="">
                 </div>
-                <div class="section-content">
+                <div class="container">
                     <div class="company-info">
-                        <p class="small-title">ABOUT THE NETWORK</p>
+                        <div class="company-info-content">
+                            <p class="small-title">ABOUT THE NETWORK</p>
 
-                        <h3><span class="surrounded white">The</span>Company</h3>
+                            <h3>
+                                <span class="surrounded white">The</span>Company
+                            </h3>
 
-                        <p>
-                            For 12 years we have been providing audit and warranty, financial advice,
-                            risk advice, taxes and related services to select clients.
-                        </p>
-
-                        <!-- Inizio Company Features Container -->
-                        <div class="features-container">
-                            <div class="feature" v-for="feature in features">
-                                <i :class="feature.icon"></i>
-                                <h4>{{feature.name}}</h4>
-                                <p>
-                                    {{feature.description}}
-                                </p>
+                            <p>
+                                For 12 years we have been providing audit and warranty, financial advice,
+                                risk advice, taxes and related services to select clients.
+                            </p>
+                            <!-- Inizio Company Features Container -->
+                            <div class="features-container">
+                                <div class="feature" v-for="feature in features">
+                                    <i :class="feature.icon"></i>
+                                    <h4>{{feature.name}}</h4>
+                                    <p>
+                                        {{feature.description}}
+                                    </p>
+                                </div>
                             </div>
-                        </div>
-                        <!-- Fine Company Features Container -->
+                            <!-- Fine Company Features Container -->
 
-                        <div class="buttons">
-                            <div class="btn">Get in Touch</div>
-                            <div class="btn-empty">Read More</div>
+                            <div class="buttons">
+                                <a class="btn" href="#get-in-touch">Get in Touch</a>
+                                <a class="btn-empty" href="#projects">Read More</a>
+                            </div>
                         </div>
                     </div>
 
@@ -264,12 +268,13 @@
                     </h3>
 
                     <ul class="project-types">
-                        <li class="all active">All</li>
-                        <li v-for="project in projects">{{project.type}}</li>
+                        <li v-for="(project, index) in projectTypes"
+                        :class="{'active' : checkActiveProjectType(index) }"
+                        @click="changeIndex(index)">{{project}}</li>
                     </ul>
 
                     <div class="projects-container">
-                        <div class="project" v-for="project in projects">
+                        <div class="project" v-for="(project, index) in projects" v-if="checkIfProjectTypeActive(index)">
                             <div class="arrow">
                                 <i class="fas fa-arrow-right"></i>
                             </div>
@@ -382,7 +387,7 @@
                                 <textarea name="name" rows="6" cols="80" placeholder="Message"></textarea>
                             </div>
 
-                            <div class="btn">Send</div>
+                            <a class="btn">Send</a>
                         </div>
 
                         <div class="company-info">
@@ -408,7 +413,7 @@
                                 </div>
                             </div>
 
-                            <div class="btn-empty">View Map</div>
+                            <a class="btn-empty">View Map</a>
 
                         </div>
                     </div>
@@ -449,8 +454,8 @@
                             </div>
                         </div>
 
-                        <div class="btn-empty">
-                            Get in Touch
+                        <div>
+                            <a class="btn-empty" href="#get-in-touch">Get in Touch</a>
                         </div>
 
 
@@ -460,10 +465,10 @@
                         <h4>{{card.title}}</h4>
 
                         <ul>
-                            <li v-for="link in card.links">
-                                <a href="#">
+                            <li v-for="(link, index) in card.links">
+                                <a :href="link.url">
                                     <i class="fas fa-chevron-right"></i>
-                                    {{link}}
+                                    {{link.name}}
                                 </a>
                             </li>
                         </ul>
@@ -485,8 +490,17 @@
             <!-- Fine Footer Bottom -->
         </footer>
         <!-- FINE FOOTER -->
+
+        <!-- Inizio Scroll To Top Button -->
+        <div class="scroll-to-top">
+            <a href="#home" :class="{'page-scrolled' : scrolled}">
+                <i class="fas fa-arrow-up"></i>
+            </a>
+        </div>
+        <!-- Fine Scroll To Top Button -->
     </div>
 
+    <!-- Foglio JS -->
     <script src="dist/app.js" charset="utf-8"></script>
 
 </body>

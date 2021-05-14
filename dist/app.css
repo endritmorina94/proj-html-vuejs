@@ -123,6 +123,30 @@ a {
   text-align: center;
 }
 
+.scroll-to-top a {
+  justify-content: center;
+  align-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  opacity: 0.75;
+  z-index: 1;
+  color: #058283;
+  background-color: #FFFFFF;
+  box-shadow: 0 5px 3px rgba(0, 0, 0, 0.3);
+  font-size: 23px;
+  display: none;
+}
+.scroll-to-top a:hover {
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+}
+.scroll-to-top a.page-scrolled {
+  display: flex;
+}
+
 .info-top-bar {
   background-color: #21333E;
   padding: 16px 0;
@@ -163,17 +187,21 @@ nav {
   transition: 0.2s top, 0.2s background-color;
   z-index: 2;
 }
+nav.fixedTop .container {
+  padding: 10px 0;
+}
 nav .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0 0;
+  padding: 20px 0 0;
 }
 nav .container .logo {
   font-size: 19.5px;
   font-weight: 700;
   color: #21333E;
   letter-spacing: 5px;
+  cursor: pointer;
 }
 nav .container .logo .logo-first-half {
   color: #00A6A6;
@@ -191,6 +219,9 @@ nav .container ul li {
 nav .container ul li:hover a:not(.btn) {
   color: #00A6A6;
 }
+nav .container ul li.active a {
+  color: #058283;
+}
 nav .container ul li a {
   text-transform: uppercase;
   font-weight: 500;
@@ -200,7 +231,6 @@ nav .container ul li a {
 .fixedTop {
   top: 0;
   background-color: white;
-  padding-bottom: 10px;
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
   transition: 0.2s top, 0.2s background-color;
 }
@@ -250,9 +280,6 @@ nav .container ul li a {
   font-size: 19px;
   line-height: 30px;
 }
-.banner .swiper-container .btn-empty {
-  margin-left: 20px;
-}
 .banner .swiper-container .left .container {
   align-items: flex-start;
 }
@@ -296,6 +323,9 @@ nav .container ul li a {
 .banner .swiper-container .right .container .slide-content p {
   margin: 20px 0 40px;
 }
+.banner .swiper-container .btn-empty {
+  margin-left: 20px;
+}
 .banner .swiper-container .swiper-pagination {
   width: -webkit-max-content;
   width: -moz-max-content;
@@ -305,7 +335,7 @@ nav .container ul li a {
   height: max-content;
   position: absolute;
   top: calc(50% - 50px);
-  left: 97%;
+  left: calc(100% - 50px);
 }
 .banner .swiper-container .swiper-pagination .swiper-pagination-bullet {
   width: 10px;
@@ -421,72 +451,86 @@ nav .container ul li a {
     opacity: 0;
   }
 }
-.company {
+#about {
   background-color: #111117;
   color: #C0C3D0;
   position: relative;
 }
-.company .section-content {
+#about .container .company-info {
+  width: 50%;
+  padding: 130px 30px 130px 0;
   display: flex;
   justify-content: flex-end;
-  align-items: center;
 }
-.company .section-content .company-info {
-  width: 37.5%;
-}
-.company .section-content .company-info h3 {
+#about .container .company-info h3 {
   color: white;
 }
-.company .section-content .company-info .features-container {
+#about .container .company-info .company-info-content {
+  width: 100%;
+  height: 100%;
   display: flex;
-  justify-content: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#about .container .company-info .features-container {
+  display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  margin-top: 40px;
+  margin-top: 50px;
 }
-.company .section-content .company-info .features-container .feature {
-  width: 40%;
+#about .container .company-info .features-container .feature {
+  width: 50%;
   margin-bottom: 40px;
-  margin-right: 40px;
 }
-.company .section-content .company-info .features-container .feature h4 {
+#about .container .company-info .features-container .feature h4 {
   color: #F9F9F9;
   display: inline-block;
 }
-.company .section-content .company-info .features-container .feature i {
+#about .container .company-info .features-container .feature i {
   font-size: 23px;
   color: #00A6A6;
   margin-right: 7px;
 }
-.company .section-content .company-info .buttons {
+#about .container .company-info .buttons {
   margin-top: 15px;
 }
-.company .section-content .company-info .buttons .btn {
+#about .container .company-info .buttons .btn {
   margin-right: 20px;
   color: #F9F9F9;
 }
-.company .section-content .company-info .buttons .btn-empty {
+#about .container .company-info .buttons .btn-empty {
   color: #F9F9F9;
 }
-.company .section-content .successfull-guy-pic {
+#about .container .successfull-guy-pic {
   width: 50%;
-  overflow: hidden;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 0;
 }
-.company .section-content .successfull-guy-pic img {
-  width: 120%;
+#about .container .successfull-guy-pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
-.company .bullets {
+#about .bullets {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
-  width: 10%;
+  width: 150px;
   height: 64px;
   overflow: hidden;
   opacity: 0.2;
+  z-index: 1;
 }
-.company .bullets.top {
+#about .bullets.top {
   top: -32px;
 }
-.company .bullets.bottom {
+#about .bullets.bottom {
   bottom: -32px;
 }
 
@@ -783,7 +827,7 @@ nav .container ul li a {
 }
 .footer-top .container .card ul li a {
   color: #C0C3D0;
-  transition: 0.5s color;
+  transition: 0.2s color;
 }
 .footer-top .container .card ul li a i {
   margin-right: 7px;
@@ -802,6 +846,7 @@ nav .container ul li a {
   font-weight: 700;
   color: #21333E;
   letter-spacing: 5px;
+  cursor: pointer;
   color: #C0C3D0;
   font-size: 25px;
 }
@@ -821,6 +866,7 @@ nav .container ul li a {
 .footer-top .container .card.muted .contacts div {
   margin-bottom: 22px;
   cursor: pointer;
+  transition: 0.2s color;
 }
 .footer-top .container .card.muted .contacts div i {
   margin-right: 7px;
@@ -829,13 +875,8 @@ nav .container ul li a {
   color: #058283;
 }
 .footer-top .container .card.muted .btn-empty {
-  color: #C0C3D0;
   margin-top: 7px;
-}
-
-.swiper-container {
-  width: 600px;
-  height: 300px;
+  color: #F9F9F9;
 }
 
 .footer-bottom {

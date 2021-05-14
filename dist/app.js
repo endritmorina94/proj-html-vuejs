@@ -26,6 +26,8 @@ var app = new Vue({
     },
     //Sezioni Pagina
     sections: ["home", "services", "about", "projects", "results"],
+    //Indice Sezione Attiva
+    activeSectionIndex: 0,
     //Tipi di Servizi Offerti
     services: [{
       name: "Audit & Assurance",
@@ -70,6 +72,10 @@ var app = new Vue({
       description: "Lorem ipsum dolor si amet consectetur adipiscing elit.",
       icon: "fas fa-graduation-cap"
     }],
+    //Tipi di Progetto
+    projectTypes: ["All", "Institutional", "Social", "Events", "Innovation", "Environment", "Technology"],
+    //Indice Progetto Attivo
+    activeProjectTypeIndex: 0,
     //Progetti dell'Azienda
     projects: [{
       type: "Institutional",
@@ -136,13 +142,67 @@ var app = new Vue({
     //Link del Footer
     footerLinks: [{
       title: "About",
-      links: ["The Company", "Institutional", "Social & Events", "Innovation", "Environment", "Technology"]
+      links: [{
+        name: "The Company",
+        url: "#"
+      }, {
+        name: "Institutional",
+        url: "#"
+      }, {
+        name: "Social & Events",
+        url: "#"
+      }, {
+        name: "Innovation",
+        url: "#"
+      }, {
+        name: "Environment",
+        url: "#"
+      }, {
+        name: "Technology",
+        url: "#"
+      }]
     }, {
       title: "Services",
-      links: ["Audit & Assurance", "Financial Advisory", "Analytics M&A", "Middle Marketing", "Legal Consulting", "Regulatory Risk"]
+      links: [{
+        name: "Audit & Assurance",
+        url: "#"
+      }, {
+        name: "Financial Advisory",
+        url: "#"
+      }, {
+        name: "Analytics M&A",
+        url: "#"
+      }, {
+        name: "Middle Marketing",
+        url: "#"
+      }, {
+        name: "Legal Consulting",
+        url: "#"
+      }, {
+        name: "Regulatory Risk",
+        url: "#"
+      }]
     }, {
       title: "Support",
-      links: ["Responsibility", "Terms of Use", "About Cookies", "Privacy Policy", "Accessibility", "Information"]
+      links: [{
+        name: "Responsibility",
+        url: "#"
+      }, {
+        name: "Terms of Use",
+        url: "#"
+      }, {
+        name: "About Cookies",
+        url: "#"
+      }, {
+        name: "Privacy Policy",
+        url: "#"
+      }, {
+        name: "Accessibility",
+        url: "#"
+      }, {
+        name: "Information",
+        url: "#"
+      }]
     }],
     //Variabile flag per scrolling
     scrolled: false
@@ -151,6 +211,30 @@ var app = new Vue({
     //Funzione/listener per lo scrolling della pagina
     handleScroll: function handleScroll() {
       this.scrolled = window.scrollY > 0;
+    },
+    //Funzione per togglare la classe active
+    checkActiveSection: function checkActiveSection(index) {
+      return index == this.activeSectionIndex ? true : false;
+    },
+    //Funzione per cambiare l'indice del tipo di progetto selezionato
+    changeSectionIndex: function changeSectionIndex(index) {
+      this.activeSectionIndex = index;
+    },
+    //Funzione per togglare la classe active
+    checkActiveProjectType: function checkActiveProjectType(index) {
+      return index == this.activeProjectTypeIndex ? true : false;
+    },
+    //Funzione per cambiare l'indice del tipo di progetto selezionato
+    changeIndex: function changeIndex(index) {
+      this.activeProjectTypeIndex = index;
+    },
+    //Funzione per filtrare i progetti per tipo
+    checkIfProjectTypeActive: function checkIfProjectTypeActive(index) {
+      if (this.projects[index].type == this.projectTypes[this.activeProjectTypeIndex] || this.activeProjectTypeIndex == 0) {
+        return true;
+      } else {
+        return false;
+      }
     }
   },
   created: function created() {
@@ -169,11 +253,8 @@ var app = new Vue({
       },
       parallax: true,
       pagination: {
-        el: '.swiper-pagination'
-      },
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+        el: ".swiper-pagination",
+        clickable: true
       }
     }); //Secondo Slider, contenuto nella sezione Results
 
@@ -184,7 +265,116 @@ var app = new Vue({
       loop: true
     }); //Particles
 
-    particlesJS.load('particles-js', '../src/particles-config.json');
+    particlesJS('particles-js', {
+      "particles": {
+        "number": {
+          "value": 15,
+          "density": {
+            "enable": true,
+            "value_area": 1000
+          }
+        },
+        "color": {
+          "value": "#80909a"
+        },
+        "shape": {
+          "type": "edge",
+          "stroke": {
+            "width": 0,
+            "color": "#000"
+          },
+          "polygon": {
+            "nb_sides": 6
+          },
+          "image": {
+            "src": "img/github.svg",
+            "width": 100,
+            "height": 100
+          }
+        },
+        "opacity": {
+          "value": 0.3,
+          "random": true,
+          "anim": {
+            "enable": false,
+            "speed": 1,
+            "opacity_min": 0.1,
+            "sync": false
+          }
+        },
+        "size": {
+          "value": 100,
+          "random": false,
+          "anim": {
+            "enable": true,
+            "speed": 10,
+            "size_min": 40,
+            "sync": false
+          }
+        },
+        "line_linked": {
+          "enable": false,
+          "distance": 200,
+          "color": "#ffffff",
+          "opacity": 1,
+          "width": 2
+        },
+        "move": {
+          "enable": true,
+          "speed": 6,
+          "direction": "none",
+          "random": false,
+          "straight": false,
+          "out_mode": "out",
+          "bounce": false,
+          "attract": {
+            "enable": false,
+            "rotateX": 600,
+            "rotateY": 1200
+          }
+        }
+      },
+      "interactivity": {
+        "detect_on": "canvas",
+        "events": {
+          "onhover": {
+            "enable": false,
+            "mode": "grab"
+          },
+          "onclick": {
+            "enable": false,
+            "mode": "push"
+          },
+          "resize": true
+        },
+        "modes": {
+          "grab": {
+            "distance": 400,
+            "line_linked": {
+              "opacity": 1
+            }
+          },
+          "bubble": {
+            "distance": 400,
+            "size": 40,
+            "duration": 2,
+            "opacity": 8,
+            "speed": 3
+          },
+          "repulse": {
+            "distance": 200,
+            "duration": 0.4
+          },
+          "push": {
+            "particles_nb": 4
+          },
+          "remove": {
+            "particles_nb": 2
+          }
+        }
+      },
+      "retina_detect": true
+    });
   }
 });
 

@@ -26,7 +26,7 @@
 
                 a {
                     color: $secondary-paragraph-color;
-                    transition: 0.5s color;
+                    transition: 0.2s color;
 
                     i {
                         margin-right: 7px;
@@ -67,6 +67,7 @@
                     div {
                         margin-bottom: 22px;
                         cursor: pointer;
+                        transition: 0.2s color;
 
                         i {
                             margin-right: 7px;
@@ -79,19 +80,14 @@
                 }
 
                 .btn-empty {
-                    color: $secondary-paragraph-color;
                     margin-top: 7px;
+                    color: $opaque-white;
                 }
             }
         }
     }
 }
 //Fine Footer Top
-
-.swiper-container {
-  width: 600px;
-  height: 300px;
-}
 
 //Inizio Footer Bottom
 .footer-bottom {

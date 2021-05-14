@@ -49,9 +49,13 @@ nav {
     transition: 0.2s top, 0.2s background-color;
     z-index: 2;
 
+    &.fixedTop .container {
+        padding: 10px 0;
+    }
+
     .container {
         @include d-flex-sb-center;
-        padding: 10px 0 0;
+        padding: 20px 0 0;
 
         .logo {
             font-size: 19.5px;
@@ -71,6 +75,10 @@ nav {
                 color: $secondary-title-color;
             }
 
+            &.active a {
+                color: $primary_color;
+            }
+
             a {
                 text-transform: uppercase;
                 font-weight: 500;
@@ -84,7 +92,6 @@ nav {
 .fixedTop {
     top: 0;
     background-color: white;
-    padding-bottom: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
     transition: 0.2s top, 0.2s background-color;
 }
@@ -143,10 +150,6 @@ nav {
             }
         }
 
-        .btn-empty {
-            margin-left: 20px;
-        }
-
         .left .container {
             align-items: flex-start;
 
@@ -203,12 +206,18 @@ nav {
             }
         }
 
+        .btn-empty {
+            margin-left: 20px;
+        }
+
+
+
         .swiper-pagination {
             width: max-content;
             height: max-content;
             position: absolute;
             top: calc(50% - 50px);
-            left: 97%;
+            left: calc(100% - 50px);
 
             .swiper-pagination-bullet {
                 width: 10px;

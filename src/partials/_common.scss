@@ -124,3 +124,29 @@ a {
 .text-center {
     text-align: center;
 }
+
+.scroll-to-top a {
+    justify-content: center;
+    align-items: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    opacity: 0.75;
+    z-index: 1;
+    color: $primary_color;
+    background-color: $bg-color-1;
+    box-shadow: 0 5px 3px rgba(0, 0, 0, 0.3);
+    font-size: 23px;
+    display: none;
+
+    &:hover{
+        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.6);
+    }
+
+    &.page-scrolled {
+        display: flex;
+    }
+}
